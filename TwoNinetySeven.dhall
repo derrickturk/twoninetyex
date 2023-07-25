@@ -435,6 +435,656 @@ let BN: Record =
       ]
   }
 
+let BO: Record =
+  { indicator = "BO"
+  , description = "Offshore Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "BO"
+        , position = 1
+        , length = 2
+        }
+      , { description = "OCS Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 8
+        }
+      , { description = "Block Prefix"
+        , type = FieldType.Alphanumeric
+        , position = 11
+        , length = 1
+        }
+      , { description = "Block Number"
+        , type = FieldType.Alphanumeric
+        , position = 12
+        , length = 6
+        }
+      , { description = "Block Suffix"
+        , type = FieldType.Alphanumeric
+        , position = 18
+        , length = 1
+        }
+      , { description = "Area Name"
+        , type = FieldType.Alphanumeric
+        , position = 19
+        , length = 8
+        }
+      , { description = "UTM Quadrant"
+        , type = FieldType.Alphanumeric
+        , position = 27
+        , length = 7
+        }
+      , { description = "State/Federal Waters Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 34
+        , length = 1
+        }
+      , { description = "Water Bottom Zone"
+        , type = FieldType.Alphanumeric
+        , position = 35
+        , length = 2
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 37
+        , length = 43
+        }
+      ]
+  }
+
+let BM: Record =
+  { indicator = "BM"
+  , description = "Location from Monument"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "BM"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Monument ID"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 6
+        }
+      , { description = "Monument Name"
+        , type = FieldType.Alphanumeric
+        , position = 9
+        , length = 37
+        }
+      , { description = "Map distance from Monument to surface location"
+        , type = FieldType.Numeric
+        , position = 46
+        , length = 6
+        }
+      , { description = "Azimuth"
+        , type = FieldType.Numeric
+        , position = 52
+        , length = 5
+        }
+      , { description = "Distance North or South in feet"
+        , type = FieldType.Numeric
+        , position = 57
+        , length = 5
+        }
+      , { description = "'N' - North or 'S' – South"
+        , type = FieldType.Alphanumeric
+        , position = 62
+        , length = 1
+        }
+      , { description = "Distance East or West in feet"
+        , type = FieldType.Numeric
+        , position = 63
+        , length = 5
+        }
+      , { description = "'E' - East or 'W' – West"
+        , type = FieldType.Alphanumeric
+        , position = 68
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 69
+        , length = 11
+        }
+      ]
+  }
+
+let C: Record =
+  { indicator = "C"
+  , description = "Operator Information"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "C"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Operator Name"
+        , type = FieldType.Alphanumeric
+        , position = 2
+        , length = 23
+        }
+      , { description = "Lease Name"
+        , type = FieldType.Alphanumeric
+        , position = 25
+        , length = 19
+        }
+      , { description = "Well Number"
+        , type = FieldType.Alphanumeric
+        , position = 44
+        , length = 10
+        }
+      , { description = "Permit Number"
+        , type = FieldType.Alphanumeric
+        , position = 54
+        , length = 7
+        }
+      , { description = "Permit Date"
+        , type = FieldType.MonthYYYYMM
+        , position = 61
+        , length = 6
+        }
+      , { description = "Field Code"
+        , type = FieldType.Alphanumeric
+        , position = 67
+        , length = 6
+        }
+      , { description = "Province Code"
+        , type = FieldType.Alphanumeric
+        , position = 73
+        , length = 3
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 76
+        , length = 4
+        }
+      ]
+  }
+
+let DA: Record =
+  { indicator = "DA"
+  , description = "Miscellaneous General Information"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "DA"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Bottom Hole Latitude"
+        , type = FieldType.Numeric
+        , position = 3
+        , length = 9
+        }
+      , { description = "Bottom Hole Longitude"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 10
+        }
+      , { description = "Field Name"
+        , type = FieldType.Alphanumeric
+        , position = 22
+        , length = 17
+        }
+      , { description = "Platform"
+        , type = FieldType.Alphanumeric
+        , position = 39
+        , length = 22
+        }
+      , { description = "Water Depth"
+        , type = FieldType.Numeric
+        , position = 61
+        , length = 5
+        }
+      , { description = "Water/Ref Datum"
+        , type = FieldType.Alphanumeric
+        , position = 66
+        , length = 4
+        }
+      , { description = "Lat/Long Source"
+        , type = FieldType.Alphanumeric
+        , position = 70
+        , length = 1
+        }
+      , { description = "Spud Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 71
+        , length = 8
+        }
+      , { description = "Directional Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 79
+        , length = 1
+        }
+      ]
+  }
+
+let DB: Record =
+  { indicator = "DB"
+  , description = "Additional Miscellaneous General Information"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "DB"
+        , position = 1
+        , length = 2
+        }
+      , { description = "IC Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 12
+        }
+      , { description = "Activity Code"
+        , type = FieldType.Alphanumeric
+        , position = 15
+        , length = 1
+        }
+      , { description = "Rig Release Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 16
+        , length = 8
+        }
+      , { description = "Abandoned Location Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 24
+        , length = 8
+        }
+      , { description = "First Report Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 32
+        , length = 8
+        }
+      , { description = "WRS First Report Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 40
+        , length = 8
+        }
+      , { description = "Last Activity Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 48
+        , length = 8
+        }
+      , { description = "Projected Formation"
+        , type = FieldType.Alphanumeric
+        , position = 56
+        , length = 8
+        }
+      , { description = "Projected Depth"
+        , type = FieldType.Numeric
+        , position = 64
+        , length = 5
+        }
+      , { description = "Initial Lahee Class"
+        , type = FieldType.Alphanumeric
+        , position = 69
+        , length = 3
+        }
+      , { description = "Final Lahee Class"
+        , type = FieldType.Alphanumeric
+        , position = 72
+        , length = 3
+        }
+      , { description = "Whipstock Depth"
+        , type = FieldType.Numeric
+        , position = 75
+        , length = 5
+        }
+      ]
+  }
+
+let DC: Record =
+  { indicator = "DC"
+  , description = "Additional Miscellaneous General Information (Permit Filer)"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "DC"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Name of Permit Filer"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 21
+        }
+      , { description = "Title of Permit Filer"
+        , type = FieldType.Alphanumeric
+        , position = 24
+        , length = 21
+        }
+      , { description = "Phone Number of Permit Filer"
+        , type = FieldType.Alphanumeric
+        , position = 45
+        , length = 14
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 59
+        , length = 21
+        }
+      ]
+  }
+
+let ET: Record =
+  { indicator = "ET"
+  , description = "Formation Tops"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "ET"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Formation Code"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 8
+        }
+      , { description = "Formation Depth"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 5
+        }
+      , { description = "Source of Top Data"
+        , type = FieldType.Alphanumeric
+        , position = 16
+        , length = 1
+        }
+      , { description = "Show Code"
+        , type = FieldType.Alphanumeric
+        , position = 17
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 18
+        , length = 62
+        }
+      ]
+  }
+
+let EB: Record =
+  { indicator = "EB"
+  , description = "Formation Bottoms"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "EB"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Formation Code"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 8
+        }
+      , { description = "Formation Base Depth"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 5
+        }
+      , { description = "Source of Base Data"
+        , type = FieldType.Alphanumeric
+        , position = 16
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 17
+        , length = 63
+        }
+      ]
+  }
+
+-- TODO: how can we make it easy to handle these 'prefix indicators'?
+let F: Record =
+  { indicator = "F"
+  , description = "Initial Potential"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "F"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Formation Code"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 8
+        }
+      , { description = "Interval Top"
+        , type = FieldType.Numeric
+        , position = 14
+        , length = 5
+        }
+      , { description = "Interval Base"
+        , type = FieldType.Numeric
+        , position = 19
+        , length = 5
+        }
+      , { description = "Oil Volume"
+        , type = FieldType.Numeric
+        , position = 24
+        , length = 5
+        }
+      , { description = "Oil Rate or Description"
+        , type = FieldType.Alphanumeric
+        , position = 29
+        , length = 4
+        }
+      , { description = "Gas Volume"
+        , type = FieldType.Numeric
+        , position = 33
+        , length = 8
+        }
+      , { description = "Gas Rate or Description"
+        , type = FieldType.Alphanumeric
+        , position = 41
+        , length = 4
+        }
+      , { description = "Water Volume"
+        , type = FieldType.Numeric
+        , position = 45
+        , length = 5
+        }
+      , { description = "Water Rate or Description"
+        , type = FieldType.Alphanumeric
+        , position = 50
+        , length = 2
+        }
+      , { description = "Flowing Tubing Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 52
+        , length = 5
+        }
+      , { description = "Bottom Hole Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 57
+        , length = 5
+        }
+      , { description = "Test Duration (hours)"
+        , type = FieldType.Numeric
+        , position = 62
+        , length = 6
+        }
+      , { description = "Choke Size (64th of an inch)"
+        , type = FieldType.Numeric
+        , position = 68
+        , length = 2
+        }
+      , { description = "Bottom Hole Temperature (°F)"
+        , type = FieldType.Numeric
+        , position = 70
+        , length = 3
+        }
+      , { description = "Method of Production"
+        , type = FieldType.Alphanumeric
+        , position = 73
+        , length = 1
+        }
+      , { description = "Gross Interval Note (G)"
+        , type = FieldType.Alphanumeric
+        , position = 74
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 75
+        , length = 5
+        }
+      ]
+  }
+
+let FA: Record =
+  { indicator = "FA"
+  , description = "IP Treat"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "FA"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Treatment Number"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 2
+        }
+      , { description = "Type of Treatment"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 4
+        }
+      , { description = "Interval Top"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 5
+        }
+      , { description = "Interval Base"
+        , type = FieldType.Numeric
+        , position = 17
+        , length = 5
+        }
+      , { description = "Volume or Weight"
+        , type = FieldType.Numeric
+        , position = 22
+        , length = 6
+        }
+      , { description = "Measurement"
+        , type = FieldType.Alphanumeric
+        , position = 28
+        , length = 4
+        }
+      , { description = "Amount of Propping Agent"
+        , type = FieldType.Numeric
+        , position = 32
+        , length = 6
+        }
+      , { description = "Tons/Pounds ('TNS' or 'LBS')"
+        , type = FieldType.Alphanumeric
+        , position = 38
+        , length = 3
+        }
+      , { description = "Formation Breakdown Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 41
+        , length = 5
+        }
+      , { description = "Average Injection Rate (BBLS/min)"
+        , type = FieldType.Numeric
+        , position = 46
+        , length = 3
+        }
+      , { description = "Type of Additive"
+        , type = FieldType.Alphanumeric
+        , position = 49
+        , length = 4
+        }
+      , { description = "Number of Stages"
+        , type = FieldType.Alphanumeric
+        , position = 53
+        , length = 3
+        }
+      , { description = "Propping Agent"
+        , type = FieldType.Alphanumeric
+        , position = 56
+        , length = 4
+        }
+      , { description = "Remark"
+        , type = FieldType.Alphanumeric
+        , position = 60
+        , length = 20
+        }
+      ]
+  }
+
+let FD: Record =
+  { indicator = "FD"
+  , description = "Detailed Perforations"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "FD"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Interval Top"
+        , type = FieldType.Numeric
+        , position = 6
+        , length = 5
+        }
+      , { description = "Interval Base"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 16
+        , length = 64
+        }
+      ]
+  }
+
+let FN: Record =
+  { indicator = "FN"
+  , description = "IP Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "FN"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Record Type Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Line Number"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 2
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 72
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
@@ -445,6 +1095,18 @@ let TwoNinetySeven: FileFormat =
       , BC
       , BT
       , BN
+      , BO
+      , BM
+      , C
+      , DA
+      , DB
+      , DC
+      , ET
+      , EB
+      , F
+      , FA
+      , FD
+      , FN
       ]
   }
 
