@@ -1770,6 +1770,188 @@ let J: Record =
       ]
   }
 
+let K: Record =
+  { indicator = "K"
+  , description = "Mud Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "K"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Weight"
+        , type = FieldType.Numeric
+        , position = 2
+        , length = 5
+        }
+      , { description = "Unit of Measurement (ppg/ppc)"
+        , type = FieldType.Alphanumeric
+        , position = 7
+        , length = 3
+        }
+      , { description = "Depth"
+        , type = FieldType.Numeric
+        , position = 10
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 15
+        , length = 65
+        }
+      ]
+  }
+
+let L: Record =
+  { indicator = "L"
+  , description = "Casing Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "L"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Sequence Number"
+        , type = FieldType.Alphanumeric
+        , position = 2
+        , length = 2
+        }
+      , { description = "Size"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 9
+        }
+      , { description = "Depth"
+        , type = FieldType.Numeric
+        , position = 13
+        , length = 5
+        }
+      , { description = "Cement"
+        , type = FieldType.Numeric
+        , position = 18
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 23
+        , length = 57
+        }
+      ]
+  }
+
+let M: Record =
+  { indicator = "M"
+  , description = "Liner Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "M"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Sequence Number"
+        , type = FieldType.Alphanumeric
+        , position = 2
+        , length = 3
+        }
+      , { description = "Size"
+        , type = FieldType.Alphanumeric
+        , position = 5
+        , length = 9
+        }
+      , { description = "Type"
+        , type = FieldType.Alphanumeric
+        , position = 14
+        , length = 5
+        }
+      , { description = "Cement"
+        , type = FieldType.Numeric
+        , position = 19
+        , length = 5
+        }
+      , { description = "Liner Top"
+        , type = FieldType.Numeric
+        , position = 24
+        , length = 5
+        }
+      , { description = "Liner Base"
+        , type = FieldType.Numeric
+        , position = 29
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 34
+        , length = 46
+        }
+      ]
+  }
+
+let N: Record =
+  { indicator = "N"
+  , description = "Tubing Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "N"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Size"
+        , type = FieldType.Alphanumeric
+        , position = 2
+        , length = 9
+        }
+      , { description = "Depth"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 16
+        , length = 54
+        }
+      ]
+  }
+
+let ON: Record =
+  { indicator = "ON"
+  , description = "Location Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "ON"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 77
+        }
+      ]
+  }
+
+let OA: Record =
+  { indicator = "OA"
+  , description = "Drilling Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "OA"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 3
+        , length = 8
+        }
+      , { description = "Remarks"
+        , type = FieldType.Alphanumeric
+        , position = 11
+        , length = 69
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
@@ -1805,6 +1987,12 @@ let TwoNinetySeven: FileFormat =
       , ID
       , IN
       , J
+      , K
+      , L
+      , M
+      , N
+      , ON
+      , OA
       ]
   }
 
