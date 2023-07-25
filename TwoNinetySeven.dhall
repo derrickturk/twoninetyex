@@ -2637,6 +2637,360 @@ let QO: Record =
       ]
   }
 
+let R1: Record =
+  { indicator = "R1"
+  , description = "Proposed Bottom Hole Reference Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "R1"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Measured Total Depth"
+        , type = FieldType.Numeric
+        , position = 3
+        , length = 5,
+        }
+      , { description = "True Vertical Depth"
+        , type = FieldType.Numeric
+        , position = 8
+        , length = 5,
+        }
+      , { description = "Closure"
+        , type = FieldType.Alphanumeric
+        , position = 13
+        , length = 14,
+        }
+      , { description = "N/S Offset Direction"
+        , type = FieldType.Alphanumeric
+        , position = 27
+        , length = 1,
+        }
+      , { description = "N/S Offset"
+        , type = FieldType.Numeric
+        , position = 28
+        , length = 5,
+        }
+      , { description = "E/W Offset Direction"
+        , type = FieldType.Alphanumeric
+        , position = 33
+        , length = 1,
+        }
+      , { description = "E/W Offset"
+        , type = FieldType.Numeric
+        , position = 34
+        , length = 5,
+        }
+      , { description = "State Code"
+        , type = FieldType.Alphanumeric
+        , position = 39
+        , length = 2,
+        }
+      , { description = "County Code"
+        , type = FieldType.Alphanumeric
+        , position = 41
+        , length = 3,
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 44
+        , length = 36,
+        }
+      ]
+  }
+
+let R2: Record =
+  { indicator = "R2"
+  , description = "Proposed Bottom Hole Reference Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "R2"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 77,
+        }
+      ]
+  }
+
+let S1: Record =
+  { indicator = "S1"
+  , description = "Actual Bottom Hole Reference Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "S1"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Measured Total Depth"
+        , type = FieldType.Numeric
+        , position = 3
+        , length = 5,
+        }
+      , { description = "True Vertical Depth"
+        , type = FieldType.Numeric
+        , position = 8
+        , length = 5,
+        }
+      , { description = "Closure"
+        , type = FieldType.Alphanumeric
+        , position = 13
+        , length = 14,
+        }
+      , { description = "N/S Offset Direction"
+        , type = FieldType.Alphanumeric
+        , position = 27
+        , length = 1,
+        }
+      , { description = "N/S Offset"
+        , type = FieldType.Numeric
+        , position = 28
+        , length = 5,
+        }
+      , { description = "E/W Offset Direction"
+        , type = FieldType.Alphanumeric
+        , position = 33
+        , length = 1,
+        }
+      , { description = "E/W Offset"
+        , type = FieldType.Numeric
+        , position = 34
+        , length = 5,
+        }
+      , { description = "State Code"
+        , type = FieldType.Alphanumeric
+        , position = 39
+        , length = 2,
+        }
+      , { description = "County Code"
+        , type = FieldType.Alphanumeric
+        , position = 41
+        , length = 3,
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 44
+        , length = 36,
+        }
+      ]
+  }
+
+let S2: Record =
+  { indicator = "S2"
+  , description = "Actual Bottom Hole Reference Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "S2"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 77,
+        }
+      ]
+  }
+
+let T: Record =
+  { indicator = "T"
+  , description = "Deviation Survey"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "T"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Measured Depth"
+        , type = FieldType.Numeric
+        , position = 2
+        , length = 5,
+        }
+      , { description = "Drift Angle"
+        , type = FieldType.Numeric
+        , position = 7
+        , length = 6,
+        }
+      , { description = "Survey Type"
+        , type = FieldType.Alphanumeric
+        , position = 13
+        , length = 4,
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 17
+        , length = 53,
+        }
+      ]
+  }
+
+let U1: Record =
+  { indicator = "U1"
+  , description = "Deviation Survey - Run Survey/Survey Level"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "U1"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Final Survey Company"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 12,
+        }
+      , { description = "Processing Type"
+        , type = FieldType.Alphanumeric
+        , position = 15
+        , length = 1,
+        }
+      , { description = "Feet or Meters (F or M)"
+        , type = FieldType.Alphanumeric
+        , position = 16
+        , length = 1,
+        }
+      , { description = "Run Number"
+        , type = FieldType.Alphanumeric
+        , position = 17
+        , length = 2,
+        }
+      , { description = "Survey Company"
+        , type = FieldType.Alphanumeric
+        , position = 19
+        , length = 12,
+        }
+      , { description = "Survey Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 31
+        , length = 8,
+        }
+      , { description = "Survey Type"
+        , type = FieldType.Alphanumeric
+        , position = 39
+        , length = 4,
+        }
+      , { description = "Start Depth"
+        , type = FieldType.Numeric
+        , position = 43
+        , length = 5,
+        }
+      , { description = "End Depth"
+        , type = FieldType.Numeric
+        , position = 48
+        , length = 5,
+        }
+      , { description = "Calculation Method"
+        , type = FieldType.Alphanumeric
+        , position = 53
+        , length = 2
+        }
+      , { description = "North Reference"
+        , type = FieldType.Alphanumeric
+        , position = 55
+        , length = 1
+        }
+      , { description = "Map Projection"
+        , type = FieldType.Alphanumeric
+        , position = 56
+        , length = 1
+        }
+      , { description = "Zone Code"
+        , type = FieldType.Alphanumeric
+        , position = 57
+        , length = 4
+        }
+      , { description = "North Correction"
+        , type = FieldType.Numeric
+        , position = 61
+        , length = 5
+        }
+      , { description = "'E' or 'W'"
+        , type = FieldType.Alphanumeric
+        , position = 66
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 67
+        , length = 13
+        }
+      ]
+  }
+
+let U2: Record =
+  { indicator = "U2"
+  , description = "Deviation Survey - Point Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "U2"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Run Number"
+        , type = FieldType.Numeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Measured Depth"
+        , type = FieldType.Numeric
+        , position = 6
+        , length = 5
+        }
+      , { description = "True Vertical Depth"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 8
+        }
+      , { description = "Drift Angle"
+        , type = FieldType.Numeric
+        , position = 19
+        , length = 6
+        }
+      , { description = "Drift Direction-Azimuth (nnn.nn)"
+        , type = FieldType.Alphanumeric
+        , position = 25
+        , length = 6
+        }
+      , { description = "Rectangular Coordinates N/S Distance"
+        , type = FieldType.Numeric
+        , position = 31
+        , length = 8
+        }
+      , { description = "Rectangular Coordinates N/S Direction"
+        , type = FieldType.Alphanumeric
+        , position = 39
+        , length = 1
+        }
+      , { description = "Rectangular Coordinates E/W Distance"
+        , type = FieldType.Numeric
+        , position = 40
+        , length = 8
+        }
+      , { description = "Rectangular Coordinates E/W Direction"
+        , type = FieldType.Alphanumeric
+        , position = 48
+        , length = 1
+        }
+      , { description = "Projected Values (P)"
+        , type = FieldType.Alphanumeric
+        , position = 49
+        , length = 1
+        }
+      , { description = "Depth Overlap Difference Run (O)"
+        , type = FieldType.Alphanumeric
+        , position = 50
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 51
+        , length = 29
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
@@ -2688,6 +3042,13 @@ let TwoNinetySeven: FileFormat =
       , QT
       , QN
       , QO
+      , R1
+      , R2
+      , S1
+      , S2
+      , T
+      , U1
+      , U2
       ]
   }
 
