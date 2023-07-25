@@ -3860,6 +3860,100 @@ let V4O: Record =
       ]
   }
 
+let V5: Record =
+  { indicator = "V5"
+  , description = "Horizontal Kickoff Point/Point of Entry Information Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V5"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 4
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 7
+        , length = 73
+        }
+      ]
+  }
+
+let V6: Record =
+  { indicator = "V6"
+  , description = "Horizontal Spoke Length/Terminus"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V6"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 4
+        }
+      , { description = "Spoke Length"
+        , type = FieldType.Numeric
+        , position = 7
+        , length = 5
+        }
+      , { description = "Measured Depth of Terminus"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 5
+        }
+      , { description = "True Vertical Depth of Terminus"
+        , type = FieldType.Numeric
+        , position = 17
+        , length = 5
+        }
+      , { description = "Distance N/S From Surface"
+        , type = FieldType.Numeric
+        , position = 22
+        , length = 5
+        }
+      , { description = "N/S Direction"
+        , type = FieldType.Alphanumeric
+        , position = 27
+        , length = 1
+        }
+      , { description = "Distance E/W from Surface"
+        , type = FieldType.Numeric
+        , position = 28
+        , length = 5
+        }
+      , { description = "E/W Direction"
+        , type = FieldType.Alphanumeric
+        , position = 33
+        , length = 1
+        }
+      , { description = "X Coordinate"
+        , type = FieldType.Numeric
+        , position = 34
+        , length = 12
+        }
+      , { description = "Y Coordinate"
+        , type = FieldType.Numeric
+        , position = 46
+        , length = 12
+        }
+      , { description = "Meters or Feet (M/F)"
+        , type = FieldType.Alphanumeric
+        , position = 58
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 59
+        , length = 21
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
@@ -3930,6 +4024,8 @@ let TwoNinetySeven: FileFormat =
       , V4T
       , V4N
       , V4O
+      , V5
+      , V6
       ]
   }
 
