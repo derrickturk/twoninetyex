@@ -831,9 +831,6 @@ let EB: Record =
       ]
   }
 
-{- note that "prefix" indicators like this should include the trailing space
- - (this makes the parser's life easier)
- -}
 let F: Record =
   { indicator = "F "
   , description = "Initial Potential"
@@ -1583,6 +1580,174 @@ let HN: Record =
       ]
   }
 
+let I: Record =
+  { indicator = "I"
+  , description = "Core Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "I"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Core Number"
+        , type = FieldType.Alphanumeric
+        , position = 2
+        , length = 3
+        }
+      , { description = "Core Top Depth"
+        , type = FieldType.Numeric
+        , position = 5
+        , length = 5
+        }
+      , { description = "Core Base Depth"
+        , type = FieldType.Numeric
+        , position = 10
+        , length = 5
+        }
+      , { description = "Recovery"
+        , type = FieldType.Numeric
+        , position = 15
+        , length = 6
+        }
+      , { description = "Unit of Measure"
+        , type = FieldType.Alphanumeric
+        , position = 21
+        , length = 2
+        }
+      , { description = "Formation Code"
+        , type = FieldType.Alphanumeric
+        , position = 23
+        , length = 8
+        }
+      , { description = "Core Type"
+        , type = FieldType.Alphanumeric
+        , position = 31
+        , length = 4
+        }
+      , { description = "Show"
+        , type = FieldType.Alphanumeric
+        , position = 35
+        , length = 4
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 39
+        , length = 41
+        }
+      ]
+  }
+
+let ID: Record =
+  { indicator = "ID"
+  , description = "Core Depth/Interval Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "ID"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Core Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Interval Number"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 3
+        }
+      , { description = "Thickness"
+        , type = FieldType.Numeric
+        , position = 9
+        , length = 7
+        }
+      , { description = "Top Depth"
+        , type = FieldType.Numeric
+        , position = 16
+        , length = 5
+        }
+      , { description = "Base Depth"
+        , type = FieldType.Numeric
+        , position = 21
+        , length = 5
+        }
+      , { description = "Lithology"
+        , type = FieldType.Alphanumeric
+        , position = 26
+        , length = 10
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 36
+        , length = 44
+        }
+      ]
+  }
+
+let IN: Record =
+  { indicator = "IN"
+  , description = "Core Narrative Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "IN"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Core Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Interval Number"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 3
+        }
+      , { description = "Core Narrative Description"
+        , type = FieldType.Alphanumeric
+        , position = 9
+        , length = 71
+        }
+      ]
+  }
+
+let J: Record =
+  { indicator = "J"
+  , description = "Logs Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "J"
+        , position = 1
+        , length = 1
+        }
+      , { description = "Run Number"
+        , type = FieldType.Numeric
+        , position = 2
+        , length = 3
+        }
+      , { description = "Log Type"
+        , type = FieldType.Alphanumeric
+        , position = 5
+        , length = 4
+        }
+      , { description = "Log Top Depth"
+        , type = FieldType.Numeric
+        , position = 9
+        , length = 5
+        }
+      , { description = "Log Base Depth"
+        , type = FieldType.Numeric
+        , position = 14
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 19
+        , length = 61
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
@@ -1613,6 +1778,11 @@ let TwoNinetySeven: FileFormat =
       , HA
       , HB
       , HF
+      , HN
+      , I
+      , ID
+      , IN
+      , J
       ]
   }
 
