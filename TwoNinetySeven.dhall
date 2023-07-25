@@ -10,7 +10,7 @@ let FileHeader: List Field =
     , length = 20
     }
   , { description = "Data Type"
-    , type = FieldType.Literal "U.S. Well Data"
+    , type = FieldType.Literal "US WELL DATA"
     , position = 21
     , length = 20
     }
@@ -831,9 +831,11 @@ let EB: Record =
       ]
   }
 
--- TODO: how can we make it easy to handle these 'prefix indicators'?
+{- note that "prefix" indicators like this should include the trailing space
+ - (this makes the parser's life easier)
+ -}
 let F: Record =
-  { indicator = "F"
+  { indicator = "F "
   , description = "Initial Potential"
   , fields =
       [ { description = "Record Type Indicator"
@@ -1062,8 +1064,259 @@ let FN: Record =
         , position = 1
         , length = 2
         }
-      , { description = "Record Type Indicator"
+      , { description = "Test Number"
         , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Line Number"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 2
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 72
+        }
+      ]
+  }
+
+let G: Record =
+  { indicator = "G "
+  , description = "Production Test"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "G"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Formation Code"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 8
+        }
+      , { description = "Interval Top"
+        , type = FieldType.Numeric
+        , position = 14
+        , length = 5
+        }
+      , { description = "Interval Base"
+        , type = FieldType.Numeric
+        , position = 19
+        , length = 5
+        }
+      , { description = "Oil Volume"
+        , type = FieldType.Numeric
+        , position = 24
+        , length = 5
+        }
+      , { description = "Oil Rate or Description"
+        , type = FieldType.Alphanumeric
+        , position = 29
+        , length = 4
+        }
+      , { description = "Gas Volume"
+        , type = FieldType.Numeric
+        , position = 33
+        , length = 8
+        }
+      , { description = "Gas Rate or Description"
+        , type = FieldType.Alphanumeric
+        , position = 41
+        , length = 4
+        }
+      , { description = "Water Volume"
+        , type = FieldType.Numeric
+        , position = 45
+        , length = 5
+        }
+      , { description = "Water Rate or Description"
+        , type = FieldType.Alphanumeric
+        , position = 50
+        , length = 2
+        }
+      , { description = "Flowing Tubing Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 52
+        , length = 5
+        }
+      , { description = "Bottom Hole Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 57
+        , length = 5
+        }
+      , { description = "Test Duration (hours)"
+        , type = FieldType.Numeric
+        , position = 62
+        , length = 6
+        }
+      , { description = "Choke Size (64th of an inch)"
+        , type = FieldType.Numeric
+        , position = 68
+        , length = 2
+        }
+      , { description = "Bottom Hole Temperature (° F)"
+        , type = FieldType.Numeric
+        , position = 70
+        , length = 3
+        }
+      , { description = "Method of Production"
+        , type = FieldType.Alphanumeric
+        , position = 73
+        , length = 1
+        }
+      , { description = "Gross Interval Note (G)"
+        , type = FieldType.Alphanumeric
+        , position = 74
+        , length = 1
+        }
+      , { description = "Shut Off Type"
+        , type = FieldType.Alphanumeric
+        , position = 75
+        , length = 4
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 79
+        , length = 1
+        }
+      ]
+  }
+
+let GA: Record =
+  { indicator = "GA"
+  , description = "PDT Treat"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "GA"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Treatment Number"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 2
+        }
+      , { description = "Type of Treatment"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 4
+        }
+      , { description = "Interval Top"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 5
+        }
+      , { description = "Interval Base"
+        , type = FieldType.Numeric
+        , position = 17
+        , length = 5
+        }
+      , { description = "Volume or Weight"
+        , type = FieldType.Numeric
+        , position = 22
+        , length = 6
+        }
+      , { description = "Measurement"
+        , type = FieldType.Alphanumeric
+        , position = 28
+        , length = 4
+        }
+      , { description = "Amount of Propping Agent"
+        , type = FieldType.Numeric
+        , position = 32
+        , length = 6
+        }
+      , { description = "Tons/Pounds ('TNS' or 'LBS')"
+        , type = FieldType.Alphanumeric
+        , position = 38
+        , length = 3
+        }
+      , { description = "Formation Breakdown Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 41
+        , length = 5
+        }
+      , { description = "Average Injection Rate (BBLS/min)"
+        , type = FieldType.Numeric
+        , position = 46
+        , length = 3
+        }
+      , { description = "Type of Additive"
+        , type = FieldType.Alphanumeric
+        , position = 49
+        , length = 4
+        }
+      , { description = "Number of Stages"
+        , type = FieldType.Alphanumeric
+        , position = 53
+        , length = 3
+        }
+      , { description = "Propping Agent"
+        , type = FieldType.Alphanumeric
+        , position = 56
+        , length = 4
+        }
+      , { description = "Remark"
+        , type = FieldType.Alphanumeric
+        , position = 60
+        , length = 20
+        }
+      ]
+  }
+
+let GD: Record =
+  { indicator = "GD"
+  , description = "PDT Perforations"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "GD"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Interval Top"
+        , type = FieldType.Numeric
+        , position = 6
+        , length = 5
+        }
+      , { description = "Interval Base"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 16
+        , length = 64
+        }
+      ]
+  }
+
+{- the spec I have has this as (a second) 'GD' indicator, but that
+ - doesn't make sense; I'm guessing it's got to be 'GN'
+ -}
+let GN: Record =
+  { indicator = "GN"
+  , description = "PDT Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "GN"
         , position = 1
         , length = 2
         }
@@ -1081,6 +1334,224 @@ let FN: Record =
         , type = FieldType.Alphanumeric
         , position = 8
         , length = 72
+        }
+      ]
+  }
+
+let H: Record =
+  { indicator = "H "
+  , description = "Drill Stem Tests"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "H"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Formation Code"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 8
+        }
+      , { description = "Interval Top"
+        , type = FieldType.Numeric
+        , position = 14
+        , length = 5
+        }
+      , { description = "Interval Bottom"
+        , type = FieldType.Numeric
+        , position = 19
+        , length = 5
+        }
+      , { description = "Initial Hydrostatic Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 24
+        , length = 5
+        }
+      , { description = "Final Hydrostatic Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 29
+        , length = 6
+        }
+      , { description = "Top Choke (64th of an inch)"
+        , type = FieldType.Numeric
+        , position = 35
+        , length = 3
+        }
+      , { description = "Bottom Hole Temperature (° F)"
+        , type = FieldType.Numeric
+        , position = 38
+        , length = 3
+        }
+      , { description = "Cushion Amount (ft)"
+        , type = FieldType.Numeric
+        , position = 41
+        , length = 5
+        }
+      , { description = "Cushion Type"
+        , type = FieldType.Alphanumeric
+        , position = 46
+        , length = 6
+        }
+      , { description = "Test Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 52
+        , length = 1
+        }
+      , { description = "Oil Gravity"
+        , type = FieldType.Numeric
+        , position = 53
+        , length = 4
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 57
+        , length = 23
+        }
+      ]
+  }
+
+let HA: Record =
+  { indicator = "HA"
+  , description = "Drill Stem Tests, Pipe Recovery Detail"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "HA"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Recovery Amount"
+        , type = FieldType.Numeric
+        , position = 6
+        , length = 5
+        }
+      , { description = "Unit of Measurement"
+        , type = FieldType.Alphanumeric
+        , position = 11
+        , length = 3
+        }
+      , { description = "Description of Recovery"
+        , type = FieldType.Alphanumeric
+        , position = 14
+        , length = 7
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 21
+        , length = 59
+        }
+      ]
+  }
+
+let HB: Record =
+  { indicator = "HB"
+  , description = "Drill Stem Tests, Material to Surface Detail"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "HB"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Amount"
+        , type = FieldType.Numeric
+        , position = 6
+        , length = 7
+        }
+      , { description = "Unit of Measurement"
+        , type = FieldType.Alphanumeric
+        , position = 13
+        , length = 4
+        }
+      , { description = "Type of Material"
+        , type = FieldType.Alphanumeric
+        , position = 17
+        , length = 4
+        }
+      , { description = "Time to Surface"
+        , type = FieldType.Alphanumeric
+        , position = 21
+        , length = 6
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 27
+        , length = 53
+        }
+      ]
+  }
+
+let HF: Record =
+  { indicator = "HF"
+  , description = "Drill Stem Tests, Flow Period"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "HF"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "(Initial) Initial Flowing Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 6
+        , length = 5
+        }
+      , { description = "(Initial) Final Flowing Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 5
+        }
+      , { description = "(Final) Initial Flowing Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 16
+        , length = 5
+        }
+      , { description = "(Final) Final Flowing Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 21
+        , length = 5
+        }
+      , { description = "Initial Shut-in Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 26
+        , length = 5
+        }
+      , { description = "Final Shut-in Pressure (ppsi)"
+        , type = FieldType.Numeric
+        , position = 31
+        , length = 5
+        }
+      , { description = "Final Open Time"
+        , type = FieldType.Alphanumeric
+        , position = 36
+        , length = 5
+        }
+      , { description = "Final Shut-in Time"
+        , type = FieldType.Alphanumeric
+        , position = 41
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 46
+        , length = 34
         }
       ]
   }
@@ -1107,6 +1578,14 @@ let TwoNinetySeven: FileFormat =
       , FA
       , FD
       , FN
+      , G
+      , GA
+      , GD
+      , GN
+      , H
+      , HA
+      , HB
+      , HF
       ]
   }
 
