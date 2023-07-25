@@ -2991,6 +2991,155 @@ let U2: Record =
       ]
   }
 
+let V1: Record =
+  { indicator = "V1"
+  , description = "Horizontal General Information"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V1"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 4
+        }
+      , { description = "Contractor Name"
+        , type = FieldType.Alphanumeric
+        , position = 7
+        , length = 10
+        }
+      , { description = "Maximum Angle Deviation (nnn.nn)"
+        , type = FieldType.Numeric
+        , position = 17
+        , length = 6
+        }
+      , { description = "Buildup Radius"
+        , type = FieldType.Alphanumeric
+        , position = 23
+        , length = 1
+        }
+      , { description = "Maximum Buildup (degrees) (nn.nn)"
+        , type = FieldType.Numeric
+        , position = 24
+        , length = 5
+        }
+      , { description = "Maximum Building (feet)"
+        , type = FieldType.Numeric
+        , position = 29
+        , length = 5
+        }
+      , { description = "Formation"
+        , type = FieldType.Alphanumeric
+        , position = 34
+        , length = 8
+        }
+      , { description = "Reservoir"
+        , type = FieldType.Alphanumeric
+        , position = 42
+        , length = 11
+        }
+      , { description = "Steered/Non-Steered"
+        , type = FieldType.Alphanumeric
+        , position = 53
+        , length = 1
+        }
+      , { description = "Total Horizontal Displacement"
+        , type = FieldType.Numeric
+        , position = 54
+        , length = 5
+        }
+      , { description = "Lateral Hole Length (Measured Depth)"
+        , type = FieldType.Numeric
+        , position = 59
+        , length = 5
+        }
+      , { description = "Horizontal Length in Formation"
+        , type = FieldType.Numeric
+        , position = 64
+        , length = 5
+        }
+      , { description = "Length of Pay"
+        , type = FieldType.Numeric
+        , position = 69
+        , length = 5
+        }
+      , { description = "Reason Horizontally Drilled"
+        , type = FieldType.Alphanumeric
+        , position = 74
+        , length = 4
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 78
+        , length = 2
+        }
+      ]
+  }
+
+let V2: Record =
+  { indicator = "V2"
+  , description = "Horizontal Directional Survey Data"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V2"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 4
+        }
+      , { description = "North Reference"
+        , type = FieldType.Alphanumeric
+        , position = 7
+        , length = 1
+        }
+      , { description = "Map Projection"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 1
+        }
+      , { description = "Zone Code"
+        , type = FieldType.Alphanumeric
+        , position = 9
+        , length = 4
+        }
+      , { description = "North Correction"
+        , type = FieldType.Numeric
+        , position = 13
+        , length = 5
+        }
+      , { description = "North Correction Direction"
+        , type = FieldType.Alphanumeric
+        , position = 18
+        , length = 1
+        }
+      , { description = "Last Point (Measured Depth)"
+        , type = FieldType.Numeric
+        , position = 19
+        , length = 5
+        }
+      , { description = "Intermediate Depth"
+        , type = FieldType.Numeric
+        , position = 24
+        , length = 5
+        }
+      , { description = "Driller or Logger Depth Flag"
+        , type = FieldType.Alphanumeric
+        , position = 29
+        , length = 1
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 30
+        , length = 50
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
@@ -3049,6 +3198,8 @@ let TwoNinetySeven: FileFormat =
       , T
       , U1
       , U2
+      , V1
+      , V2
       ]
   }
 
