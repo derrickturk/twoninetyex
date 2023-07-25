@@ -1556,6 +1556,33 @@ let HF: Record =
       ]
   }
 
+let HN: Record =
+  { indicator = "HN"
+  , description = "Drill Stem Test Narrative"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "HN"
+        , position = 1
+        , length = 2
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 3
+        , length = 3
+        }
+      , { description = "Line Number"
+        , type = FieldType.Alphanumeric
+        , position = 6
+        , length = 2
+        }
+      , { description = "Narrative"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 72
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
