@@ -3500,6 +3500,366 @@ let V3O: Record =
       ]
   }
 
+let V4F: Record =
+  { indicator = "V4F"
+  , description = "Horizontal Point of Entry Footage Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V4F"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 4
+        }
+      , { description = "North/South Footage"
+        , type = FieldType.Numeric
+        , position = 8
+        , length = 5
+        }
+      , { description = "North/South Direction"
+        , type = FieldType.Alphanumeric
+        , position = 13
+        , length = 4
+        }
+      , { description = "East/West Footage"
+        , type = FieldType.Numeric
+        , position = 17
+        , length = 5
+        }
+      , { description = "East/West Direction"
+        , type = FieldType.Alphanumeric
+        , position = 22
+        , length = 4
+        }
+      , { description = "Footage Reference"
+        , type = FieldType.Alphanumeric
+        , position = 26
+        , length = 12
+        }
+      , { description = "X Coordinate"
+        , type = FieldType.Numeric
+        , position = 38
+        , length = 12
+        }
+      , { description = "Y Coordinate"
+        , type = FieldType.Numeric
+        , position = 50
+        , length = 12
+        }
+      , { description = "Zone Code"
+        , type = FieldType.Alphanumeric
+        , position = 62
+        , length = 4
+        }
+      , { description = "Projection"
+        , type = FieldType.Alphanumeric
+        , position = 66
+        , length = 1
+        }
+      , { description = "Feet or Meters (F/M)"
+        , type = FieldType.Alphanumeric
+        , position = 67
+        , length = 1
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 68
+        , length = 12
+        }
+      ]
+  }
+
+let V4C: Record =
+  { indicator = "V4C"
+  , description = "Horizontal Point of Entry Congressional and Carter Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V4C"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 4
+        }
+      , { description = "Township Direction"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 1
+        }
+      , { description = "Township Number"
+        , type = FieldType.Alphanumeric
+        , position = 9
+        , length = 5
+        }
+      , { description = "Range Direction"
+        , type = FieldType.Alphanumeric
+        , position = 14
+        , length = 1
+        }
+      , { description = "Range Number"
+        , type = FieldType.Alphanumeric
+        , position = 15
+        , length = 5
+        }
+      , { description = "Section or Equivalent Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 20
+        , length = 3
+        }
+      , { description = "Section or Equivalent Number"
+        , type = FieldType.Alphanumeric
+        , position = 23
+        , length = 5
+        }
+      , { description = "Spot"
+        , type = FieldType.Alphanumeric
+        , position = 28
+        , length = 8
+        }
+      , { description = "Meridian Code"
+        , type = FieldType.Alphanumeric
+        , position = 36
+        , length = 2
+        }
+      , { description = "Meridian Name"
+        , type = FieldType.Alphanumeric
+        , position = 38
+        , length = 17
+        }
+      , { description = "State Code"
+        , type = FieldType.Alphanumeric
+        , position = 55
+        , length = 2
+        }
+      , { description = "County Code"
+        , type = FieldType.Alphanumeric
+        , position = 57
+        , length = 3
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 60
+        , length = 20
+        }
+      ]
+  }
+
+let V4T: Record =
+  { indicator = "V4T"
+  , description = "Horizontal Point of Entry Texas Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V4T"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 4
+        }
+      , { description = "Railroad District"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 2
+        }
+      , { description = "Block or League Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 10
+        , length = 1
+        }
+      , { description = "Block or League Number"
+        , type = FieldType.Alphanumeric
+        , position = 11
+        , length = 4
+        }
+      , { description = "Block Fraction"
+        , type = FieldType.Alphanumeric
+        , position = 15
+        , length = 3
+        }
+      , { description = "Section or Labor Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 18
+        , length = 1
+        }
+      , { description = "Section or Labor Number"
+        , type = FieldType.Alphanumeric
+        , position = 19
+        , length = 4
+        }
+      , { description = "Section Fraction"
+        , type = FieldType.Alphanumeric
+        , position = 23
+        , length = 3
+        }
+      , { description = "Lot Number"
+        , type = FieldType.Alphanumeric
+        , position = 26
+        , length = 4
+        }
+      , { description = "Township Direction"
+        , type = FieldType.Alphanumeric
+        , position = 30
+        , length = 1
+        }
+      , { description = "Township Number"
+        , type = FieldType.Alphanumeric
+        , position = 31
+        , length = 4
+        }
+      , { description = "Survey Name"
+        , type = FieldType.Alphanumeric
+        , position = 35
+        , length = 16
+        }
+      , { description = "Abstract Number"
+        , type = FieldType.Alphanumeric
+        , position = 51
+        , length = 7
+        }
+      , { description = "State Code"
+        , type = FieldType.Alphanumeric
+        , position = 58
+        , length = 2
+        }
+      , { description = "County Code"
+        , type = FieldType.Alphanumeric
+        , position = 60
+        , length = 3
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 63
+        , length = 17
+        }
+      ]
+  }
+
+let V4N: Record =
+  { indicator = "V4N"
+  , description = "Horizontal Point of Entry Northeast and Ohio Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V4N"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 4
+        }
+      , { description = "Named Township"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 22
+        }
+      , { description = "Lot or Section Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 30
+        , length = 1
+        }
+      , { description = "Lot or Section Number"
+        , type = FieldType.Alphanumeric
+        , position = 31
+        , length = 5
+        }
+      , { description = "Quadrangle Name"
+        , type = FieldType.Alphanumeric
+        , position = 36
+        , length = 20
+        }
+      , { description = "Reference Latitude"
+        , type = FieldType.G2
+        , position = 56
+        , length = 9
+        }
+      , { description = "Reference Longitude"
+        , type = FieldType.G3
+        , position = 65
+        , length = 10
+        }
+      , { description = "State Code"
+        , type = FieldType.Alphanumeric
+        , position = 75
+        , length = 2
+        }
+      , { description = "County Code"
+        , type = FieldType.Alphanumeric
+        , position = 77
+        , length = 3
+        }
+      ]
+  }
+
+let V4O: Record =
+  { indicator = "V4O"
+  , description = "Horizontal Point of Entry Offshore Location"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "V4O"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Lateral Hole Identification"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 4
+        }
+      , { description = "OCS Number"
+        , type = FieldType.Alphanumeric
+        , position = 8
+        , length = 8
+        }
+      , { description = "Block Prefix"
+        , type = FieldType.Alphanumeric
+        , position = 16
+        , length = 1
+        }
+      , { description = "Block Number"
+        , type = FieldType.Alphanumeric
+        , position = 17
+        , length = 6
+        }
+      , { description = "Block Suffix"
+        , type = FieldType.Alphanumeric
+        , position = 23
+        , length = 1
+        }
+      , { description = "Area Name"
+        , type = FieldType.Alphanumeric
+        , position = 24
+        , length = 8
+        }
+      , { description = "UTM Quadrant"
+        , type = FieldType.Alphanumeric
+        , position = 32
+        , length = 7
+        }
+      , { description = "State/Federal Waters Indicator"
+        , type = FieldType.Alphanumeric
+        , position = 39
+        , length = 1
+        }
+      , { description = "Water Bottom Zone"
+        , type = FieldType.Alphanumeric
+        , position = 40
+        , length = 2
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 42
+        , length = 38
+        }
+      ]
+  }
+
 let TwoNinetySeven: FileFormat =
   { header = FileHeader
   , records =
@@ -3565,6 +3925,11 @@ let TwoNinetySeven: FileFormat =
       , V3T
       , V3N
       , V3O
+      , V4F
+      , V4C
+      , V4T
+      , V4N
+      , V4O
       ]
   }
 
