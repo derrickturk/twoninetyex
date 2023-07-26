@@ -97,7 +97,7 @@ let EndLabel: Record =
       ]
   }
 
-let General: Record =
+let A: Record =
   { indicator = "A"
   , description = "General Information"
   , fields =
@@ -3959,7 +3959,7 @@ let TwoNinetySeven: FileFormat =
   , records =
       [ StartLabel
       , EndLabel
-      , General
+      , A
       , BF
       , BC
       , BT
