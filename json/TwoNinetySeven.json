@@ -1,0 +1,4542 @@
+{
+  "header": [
+    {
+      "description": "Record Key",
+      "length": 20,
+      "position": 1,
+      "type": "Alphanumeric"
+    },
+    {
+      "description": "Data Type",
+      "length": 20,
+      "position": 21,
+      "type": "US WELL DATA"
+    },
+    {
+      "description": "Download Format",
+      "length": 12,
+      "position": 41,
+      "type": "297"
+    },
+    {
+      "description": "Version",
+      "length": 4,
+      "position": 53,
+      "type": "Alphanumeric"
+    },
+    {
+      "description": "Delimiter",
+      "length": 7,
+      "position": 57,
+      "type": "Alphanumeric"
+    },
+    {
+      "description": "Write Date",
+      "length": 10,
+      "position": 64,
+      "type": "DateYYYYSlashMMSlashDD"
+    },
+    {
+      "description": "Entity Count",
+      "length": 6,
+      "position": 74,
+      "type": "Numeric"
+    }
+  ],
+  "records": [
+    {
+      "description": "Start Record Label",
+      "fields": [
+        {
+          "description": "START_US_WELL",
+          "length": 30,
+          "position": 1,
+          "type": "START_US_WELL"
+        },
+        {
+          "description": "UWI",
+          "length": 20,
+          "position": 31,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "START_US_WELL"
+    },
+    {
+      "description": "End Record Label",
+      "fields": [
+        {
+          "description": "END_US_WELL",
+          "length": 30,
+          "position": 1,
+          "type": "END_US_WELL"
+        },
+        {
+          "description": "UWI",
+          "length": 20,
+          "position": 31,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "END_US_WELL"
+    },
+    {
+      "description": "General Information",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "A"
+        },
+        {
+          "description": "API Number",
+          "length": 14,
+          "position": 2,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Latitude (±nn.nnnnn)",
+          "length": 9,
+          "position": 16,
+          "type": "Numeric"
+        },
+        {
+          "description": "Longitude (±nnn.nnnnn)",
+          "length": 10,
+          "position": 25,
+          "type": "Numeric"
+        },
+        {
+          "description": "Formation at Total Depth",
+          "length": 8,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Producing Formation",
+          "length": 8,
+          "position": 43,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Initial Well Class",
+          "length": 1,
+          "position": 51,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Final Well Class",
+          "length": 1,
+          "position": 52,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Well Status",
+          "length": 6,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Elevation",
+          "length": 5,
+          "position": 59,
+          "type": "Numeric"
+        },
+        {
+          "description": "Elevation Reference",
+          "length": 2,
+          "position": 64,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Total Depth",
+          "length": 5,
+          "position": 66,
+          "type": "Numeric"
+        },
+        {
+          "description": "Completion Date",
+          "length": 8,
+          "position": 71,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Lat/Long Source",
+          "length": 1,
+          "position": 79,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "A"
+    },
+    {
+      "description": "Footage Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "BF"
+        },
+        {
+          "description": "North/South Footage",
+          "length": 5,
+          "position": 3,
+          "type": "Numeric"
+        },
+        {
+          "description": "North/South Direction",
+          "length": 4,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "East/West Footage",
+          "length": 5,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "East/West Direction",
+          "length": 4,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Footage Reference",
+          "length": 12,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "X Coordinate",
+          "length": 12,
+          "position": 33,
+          "type": "Numeric"
+        },
+        {
+          "description": "Y Coordinate",
+          "length": 12,
+          "position": 45,
+          "type": "Numeric"
+        },
+        {
+          "description": "Zone Code",
+          "length": 4,
+          "position": 57,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Projection",
+          "length": 1,
+          "position": 61,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Feet or Meters (F/M)",
+          "length": 1,
+          "position": 62,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 17,
+          "position": 63,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "BF"
+    },
+    {
+      "description": "Congress and Carter Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "BC"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 5,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Direction",
+          "length": 1,
+          "position": 9,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Number",
+          "length": 5,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Indicator",
+          "length": 3,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Number",
+          "length": 5,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spot",
+          "length": 8,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Code",
+          "length": 2,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Name",
+          "length": 17,
+          "position": 33,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 50,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 52,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 25,
+          "position": 55,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "BC"
+    },
+    {
+      "description": "Texas Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "BT"
+        },
+        {
+          "description": "Railroad District",
+          "length": 2,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Indicator",
+          "length": 1,
+          "position": 5,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Number",
+          "length": 4,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Fraction",
+          "length": 3,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Indicator",
+          "length": 1,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Number",
+          "length": 4,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section Fraction",
+          "length": 3,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot Number",
+          "length": 4,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 4,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Name",
+          "length": 16,
+          "position": 30,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Abstract Number",
+          "length": 7,
+          "position": 46,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 55,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 22,
+          "position": 58,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "BT"
+    },
+    {
+      "description": "Northeast and Ohio Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "BN"
+        },
+        {
+          "description": "Named Township",
+          "length": 22,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Indicator",
+          "length": 1,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Number",
+          "length": 5,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Quadrangle Name",
+          "length": 20,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Reference Latitude",
+          "length": 9,
+          "position": 51,
+          "type": "G2"
+        },
+        {
+          "description": "Reference Longitude",
+          "length": 10,
+          "position": 60,
+          "type": "G3"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 70,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 72,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 5,
+          "position": 75,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "BN"
+    },
+    {
+      "description": "Offshore Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "BO"
+        },
+        {
+          "description": "OCS Number",
+          "length": 8,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Prefix",
+          "length": 1,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Number",
+          "length": 6,
+          "position": 12,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Suffix",
+          "length": 1,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Area Name",
+          "length": 8,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "UTM Quadrant",
+          "length": 7,
+          "position": 27,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State/Federal Waters Indicator",
+          "length": 1,
+          "position": 34,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Bottom Zone",
+          "length": 2,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 43,
+          "position": 37,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "BO"
+    },
+    {
+      "description": "Location from Monument",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "BM"
+        },
+        {
+          "description": "Monument ID",
+          "length": 6,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Monument Name",
+          "length": 37,
+          "position": 9,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Map distance from Monument to surface location",
+          "length": 6,
+          "position": 46,
+          "type": "Numeric"
+        },
+        {
+          "description": "Azimuth",
+          "length": 5,
+          "position": 52,
+          "type": "Numeric"
+        },
+        {
+          "description": "Distance North or South in feet",
+          "length": 5,
+          "position": 57,
+          "type": "Numeric"
+        },
+        {
+          "description": "'N' - North or 'S' – South",
+          "length": 1,
+          "position": 62,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Distance East or West in feet",
+          "length": 5,
+          "position": 63,
+          "type": "Numeric"
+        },
+        {
+          "description": "'E' - East or 'W' – West",
+          "length": 1,
+          "position": 68,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 11,
+          "position": 69,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "BM"
+    },
+    {
+      "description": "Operator Information",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "C"
+        },
+        {
+          "description": "Operator Name",
+          "length": 23,
+          "position": 2,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lease Name",
+          "length": 19,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Well Number",
+          "length": 10,
+          "position": 44,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Permit Number",
+          "length": 7,
+          "position": 54,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Permit Date",
+          "length": 6,
+          "position": 61,
+          "type": "MonthYYYYMM"
+        },
+        {
+          "description": "Field Code",
+          "length": 6,
+          "position": 67,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Province Code",
+          "length": 3,
+          "position": 73,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 4,
+          "position": 76,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "C"
+    },
+    {
+      "description": "Miscellaneous General Information",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "DA"
+        },
+        {
+          "description": "Bottom Hole Latitude",
+          "length": 9,
+          "position": 3,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Longitude",
+          "length": 10,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "Field Name",
+          "length": 17,
+          "position": 22,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Platform",
+          "length": 22,
+          "position": 39,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Depth",
+          "length": 5,
+          "position": 61,
+          "type": "Numeric"
+        },
+        {
+          "description": "Water/Ref Datum",
+          "length": 4,
+          "position": 66,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lat/Long Source",
+          "length": 1,
+          "position": 70,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spud Date",
+          "length": 8,
+          "position": 71,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Directional Indicator",
+          "length": 1,
+          "position": 79,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "DA"
+    },
+    {
+      "description": "Additional Miscellaneous General Information",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "DB"
+        },
+        {
+          "description": "IC Number",
+          "length": 12,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Activity Code",
+          "length": 1,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Rig Release Date",
+          "length": 8,
+          "position": 16,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Abandoned Location Date",
+          "length": 8,
+          "position": 24,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "First Report Date",
+          "length": 8,
+          "position": 32,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "WRS First Report Date",
+          "length": 8,
+          "position": 40,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Last Activity Date",
+          "length": 8,
+          "position": 48,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Projected Formation",
+          "length": 8,
+          "position": 56,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Projected Depth",
+          "length": 5,
+          "position": 64,
+          "type": "Numeric"
+        },
+        {
+          "description": "Initial Lahee Class",
+          "length": 3,
+          "position": 69,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Final Lahee Class",
+          "length": 3,
+          "position": 72,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Whipstock Depth",
+          "length": 5,
+          "position": 75,
+          "type": "Numeric"
+        }
+      ],
+      "indicator": "DB"
+    },
+    {
+      "description": "Additional Miscellaneous General Information (Permit Filer)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "DC"
+        },
+        {
+          "description": "Name of Permit Filer",
+          "length": 21,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Title of Permit Filer",
+          "length": 21,
+          "position": 24,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Phone Number of Permit Filer",
+          "length": 14,
+          "position": 45,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 21,
+          "position": 59,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "DC"
+    },
+    {
+      "description": "Formation Tops",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "ET"
+        },
+        {
+          "description": "Formation Code",
+          "length": 8,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Depth",
+          "length": 5,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "Source of Top Data",
+          "length": 1,
+          "position": 16,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Show Code",
+          "length": 1,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 62,
+          "position": 18,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "ET"
+    },
+    {
+      "description": "Formation Bottoms",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "EB"
+        },
+        {
+          "description": "Formation Code",
+          "length": 8,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Base Depth",
+          "length": 5,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "Source of Base Data",
+          "length": 1,
+          "position": 16,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 63,
+          "position": 17,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "EB"
+    },
+    {
+      "description": "Initial Potential",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "F"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Code",
+          "length": 8,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Top",
+          "length": 5,
+          "position": 14,
+          "type": "Numeric"
+        },
+        {
+          "description": "Interval Base",
+          "length": 5,
+          "position": 19,
+          "type": "Numeric"
+        },
+        {
+          "description": "Oil Volume",
+          "length": 5,
+          "position": 24,
+          "type": "Numeric"
+        },
+        {
+          "description": "Oil Rate or Description",
+          "length": 4,
+          "position": 29,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Gas Volume",
+          "length": 8,
+          "position": 33,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas Rate or Description",
+          "length": 4,
+          "position": 41,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Volume",
+          "length": 5,
+          "position": 45,
+          "type": "Numeric"
+        },
+        {
+          "description": "Water Rate or Description",
+          "length": 2,
+          "position": 50,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Flowing Tubing Pressure (ppsi)",
+          "length": 5,
+          "position": 52,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Pressure (ppsi)",
+          "length": 5,
+          "position": 57,
+          "type": "Numeric"
+        },
+        {
+          "description": "Test Duration (hours)",
+          "length": 6,
+          "position": 62,
+          "type": "Numeric"
+        },
+        {
+          "description": "Choke Size (64th of an inch)",
+          "length": 2,
+          "position": 68,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Temperature (°F)",
+          "length": 3,
+          "position": 70,
+          "type": "Numeric"
+        },
+        {
+          "description": "Method of Production",
+          "length": 1,
+          "position": 73,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Gross Interval Note (G)",
+          "length": 1,
+          "position": 74,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 5,
+          "position": 75,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "F "
+    },
+    {
+      "description": "IP Treat",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "FA"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Treatment Number",
+          "length": 2,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Type of Treatment",
+          "length": 4,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Top",
+          "length": 5,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "Interval Base",
+          "length": 5,
+          "position": 17,
+          "type": "Numeric"
+        },
+        {
+          "description": "Volume or Weight",
+          "length": 6,
+          "position": 22,
+          "type": "Numeric"
+        },
+        {
+          "description": "Measurement",
+          "length": 4,
+          "position": 28,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Amount of Propping Agent",
+          "length": 6,
+          "position": 32,
+          "type": "Numeric"
+        },
+        {
+          "description": "Tons/Pounds ('TNS' or 'LBS')",
+          "length": 3,
+          "position": 38,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Breakdown Pressure (ppsi)",
+          "length": 5,
+          "position": 41,
+          "type": "Numeric"
+        },
+        {
+          "description": "Average Injection Rate (BBLS/min)",
+          "length": 3,
+          "position": 46,
+          "type": "Numeric"
+        },
+        {
+          "description": "Type of Additive",
+          "length": 4,
+          "position": 49,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Number of Stages",
+          "length": 3,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Propping Agent",
+          "length": 4,
+          "position": 56,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Remark",
+          "length": 20,
+          "position": 60,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "FA"
+    },
+    {
+      "description": "Detailed Perforations",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "FD"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Top",
+          "length": 5,
+          "position": 6,
+          "type": "Numeric"
+        },
+        {
+          "description": "Interval Base",
+          "length": 5,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 64,
+          "position": 16,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "FD"
+    },
+    {
+      "description": "IP Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "FN"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Line Number",
+          "length": 2,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Narrative",
+          "length": 72,
+          "position": 8,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "FN"
+    },
+    {
+      "description": "Production Test",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "G"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Code",
+          "length": 8,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Top",
+          "length": 5,
+          "position": 14,
+          "type": "Numeric"
+        },
+        {
+          "description": "Interval Base",
+          "length": 5,
+          "position": 19,
+          "type": "Numeric"
+        },
+        {
+          "description": "Oil Volume",
+          "length": 5,
+          "position": 24,
+          "type": "Numeric"
+        },
+        {
+          "description": "Oil Rate or Description",
+          "length": 4,
+          "position": 29,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Gas Volume",
+          "length": 8,
+          "position": 33,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas Rate or Description",
+          "length": 4,
+          "position": 41,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Volume",
+          "length": 5,
+          "position": 45,
+          "type": "Numeric"
+        },
+        {
+          "description": "Water Rate or Description",
+          "length": 2,
+          "position": 50,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Flowing Tubing Pressure (ppsi)",
+          "length": 5,
+          "position": 52,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Pressure (ppsi)",
+          "length": 5,
+          "position": 57,
+          "type": "Numeric"
+        },
+        {
+          "description": "Test Duration (hours)",
+          "length": 6,
+          "position": 62,
+          "type": "Numeric"
+        },
+        {
+          "description": "Choke Size (64th of an inch)",
+          "length": 2,
+          "position": 68,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Temperature (° F)",
+          "length": 3,
+          "position": 70,
+          "type": "Numeric"
+        },
+        {
+          "description": "Method of Production",
+          "length": 1,
+          "position": 73,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Gross Interval Note (G)",
+          "length": 1,
+          "position": 74,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Shut Off Type",
+          "length": 4,
+          "position": 75,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 1,
+          "position": 79,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "G "
+    },
+    {
+      "description": "PDT Treat",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "GA"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Treatment Number",
+          "length": 2,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Type of Treatment",
+          "length": 4,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Top",
+          "length": 5,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "Interval Base",
+          "length": 5,
+          "position": 17,
+          "type": "Numeric"
+        },
+        {
+          "description": "Volume or Weight",
+          "length": 6,
+          "position": 22,
+          "type": "Numeric"
+        },
+        {
+          "description": "Measurement",
+          "length": 4,
+          "position": 28,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Amount of Propping Agent",
+          "length": 6,
+          "position": 32,
+          "type": "Numeric"
+        },
+        {
+          "description": "Tons/Pounds ('TNS' or 'LBS')",
+          "length": 3,
+          "position": 38,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Breakdown Pressure (ppsi)",
+          "length": 5,
+          "position": 41,
+          "type": "Numeric"
+        },
+        {
+          "description": "Average Injection Rate (BBLS/min)",
+          "length": 3,
+          "position": 46,
+          "type": "Numeric"
+        },
+        {
+          "description": "Type of Additive",
+          "length": 4,
+          "position": 49,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Number of Stages",
+          "length": 3,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Propping Agent",
+          "length": 4,
+          "position": 56,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Remark",
+          "length": 20,
+          "position": 60,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "GA"
+    },
+    {
+      "description": "PDT Perforations",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "GD"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Top",
+          "length": 5,
+          "position": 6,
+          "type": "Numeric"
+        },
+        {
+          "description": "Interval Base",
+          "length": 5,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 64,
+          "position": 16,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "GD"
+    },
+    {
+      "description": "PDT Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "GN"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Line Number",
+          "length": 2,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Narrative",
+          "length": 72,
+          "position": 8,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "GN"
+    },
+    {
+      "description": "Drill Stem Tests",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "H"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Code",
+          "length": 8,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Top",
+          "length": 5,
+          "position": 14,
+          "type": "Numeric"
+        },
+        {
+          "description": "Interval Bottom",
+          "length": 5,
+          "position": 19,
+          "type": "Numeric"
+        },
+        {
+          "description": "Initial Hydrostatic Pressure (ppsi)",
+          "length": 5,
+          "position": 24,
+          "type": "Numeric"
+        },
+        {
+          "description": "Final Hydrostatic Pressure (ppsi)",
+          "length": 6,
+          "position": 29,
+          "type": "Numeric"
+        },
+        {
+          "description": "Top Choke (64th of an inch)",
+          "length": 3,
+          "position": 35,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Temperature (° F)",
+          "length": 3,
+          "position": 38,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cushion Amount (ft)",
+          "length": 5,
+          "position": 41,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cushion Type",
+          "length": 6,
+          "position": 46,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Test Indicator",
+          "length": 1,
+          "position": 52,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Oil Gravity",
+          "length": 4,
+          "position": 53,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 23,
+          "position": 57,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "H "
+    },
+    {
+      "description": "Drill Stem Tests, Pipe Recovery Detail",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "HA"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Recovery Amount",
+          "length": 5,
+          "position": 6,
+          "type": "Numeric"
+        },
+        {
+          "description": "Unit of Measurement",
+          "length": 3,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Description of Recovery",
+          "length": 7,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 59,
+          "position": 21,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "HA"
+    },
+    {
+      "description": "Drill Stem Tests, Material to Surface Detail",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "HB"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Amount",
+          "length": 7,
+          "position": 6,
+          "type": "Numeric"
+        },
+        {
+          "description": "Unit of Measurement",
+          "length": 4,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Type of Material",
+          "length": 4,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Time to Surface",
+          "length": 6,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 53,
+          "position": 27,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "HB"
+    },
+    {
+      "description": "Drill Stem Tests, Flow Period",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "HF"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "(Initial) Initial Flowing Pressure (ppsi)",
+          "length": 5,
+          "position": 6,
+          "type": "Numeric"
+        },
+        {
+          "description": "(Initial) Final Flowing Pressure (ppsi)",
+          "length": 5,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "(Final) Initial Flowing Pressure (ppsi)",
+          "length": 5,
+          "position": 16,
+          "type": "Numeric"
+        },
+        {
+          "description": "(Final) Final Flowing Pressure (ppsi)",
+          "length": 5,
+          "position": 21,
+          "type": "Numeric"
+        },
+        {
+          "description": "Initial Shut-in Pressure (ppsi)",
+          "length": 5,
+          "position": 26,
+          "type": "Numeric"
+        },
+        {
+          "description": "Final Shut-in Pressure (ppsi)",
+          "length": 5,
+          "position": 31,
+          "type": "Numeric"
+        },
+        {
+          "description": "Final Open Time",
+          "length": 5,
+          "position": 36,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Final Shut-in Time",
+          "length": 5,
+          "position": 41,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 34,
+          "position": 46,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "HF"
+    },
+    {
+      "description": "Drill Stem Test Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "HN"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Line Number",
+          "length": 2,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Narrative",
+          "length": 72,
+          "position": 8,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "HN"
+    },
+    {
+      "description": "Core Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "I"
+        },
+        {
+          "description": "Core Number",
+          "length": 3,
+          "position": 2,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Core Top Depth",
+          "length": 5,
+          "position": 5,
+          "type": "Numeric"
+        },
+        {
+          "description": "Core Base Depth",
+          "length": 5,
+          "position": 10,
+          "type": "Numeric"
+        },
+        {
+          "description": "Recovery",
+          "length": 6,
+          "position": 15,
+          "type": "Numeric"
+        },
+        {
+          "description": "Unit of Measure",
+          "length": 2,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Code",
+          "length": 8,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Core Type",
+          "length": 4,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Show",
+          "length": 4,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 41,
+          "position": 39,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "I"
+    },
+    {
+      "description": "Core Depth/Interval Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "ID"
+        },
+        {
+          "description": "Core Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Number",
+          "length": 3,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Thickness",
+          "length": 7,
+          "position": 9,
+          "type": "Numeric"
+        },
+        {
+          "description": "Top Depth",
+          "length": 5,
+          "position": 16,
+          "type": "Numeric"
+        },
+        {
+          "description": "Base Depth",
+          "length": 5,
+          "position": 21,
+          "type": "Numeric"
+        },
+        {
+          "description": "Lithology",
+          "length": 10,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 44,
+          "position": 36,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "ID"
+    },
+    {
+      "description": "Core Narrative Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "IN"
+        },
+        {
+          "description": "Core Number",
+          "length": 3,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Interval Number",
+          "length": 3,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Core Narrative Description",
+          "length": 71,
+          "position": 9,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "IN"
+    },
+    {
+      "description": "Logs Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "J"
+        },
+        {
+          "description": "Run Number",
+          "length": 3,
+          "position": 2,
+          "type": "Numeric"
+        },
+        {
+          "description": "Log Type",
+          "length": 4,
+          "position": 5,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Log Top Depth",
+          "length": 5,
+          "position": 9,
+          "type": "Numeric"
+        },
+        {
+          "description": "Log Base Depth",
+          "length": 5,
+          "position": 14,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 61,
+          "position": 19,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "J"
+    },
+    {
+      "description": "Mud Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "K"
+        },
+        {
+          "description": "Weight",
+          "length": 5,
+          "position": 2,
+          "type": "Numeric"
+        },
+        {
+          "description": "Unit of Measurement (ppg/ppc)",
+          "length": 3,
+          "position": 7,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Depth",
+          "length": 5,
+          "position": 10,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 65,
+          "position": 15,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "K"
+    },
+    {
+      "description": "Casing Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "L"
+        },
+        {
+          "description": "Sequence Number",
+          "length": 2,
+          "position": 2,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Size",
+          "length": 9,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Depth",
+          "length": 5,
+          "position": 13,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cement",
+          "length": 5,
+          "position": 18,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 57,
+          "position": 23,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "L"
+    },
+    {
+      "description": "Liner Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "M"
+        },
+        {
+          "description": "Sequence Number",
+          "length": 3,
+          "position": 2,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Size",
+          "length": 9,
+          "position": 5,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Type",
+          "length": 5,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Cement",
+          "length": 5,
+          "position": 19,
+          "type": "Numeric"
+        },
+        {
+          "description": "Liner Top",
+          "length": 5,
+          "position": 24,
+          "type": "Numeric"
+        },
+        {
+          "description": "Liner Base",
+          "length": 5,
+          "position": 29,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 46,
+          "position": 34,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "M"
+    },
+    {
+      "description": "Tubing Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "N"
+        },
+        {
+          "description": "Size",
+          "length": 9,
+          "position": 2,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Depth",
+          "length": 5,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 54,
+          "position": 16,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "N"
+    },
+    {
+      "description": "Location Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "ON"
+        },
+        {
+          "description": "Narrative",
+          "length": 77,
+          "position": 3,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "ON"
+    },
+    {
+      "description": "Drilling Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "OA"
+        },
+        {
+          "description": "Date",
+          "length": 8,
+          "position": 3,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Remarks",
+          "length": 69,
+          "position": 11,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "OA"
+    },
+    {
+      "description": "Proposed Bottom Hole Location (Footage)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "PF"
+        },
+        {
+          "description": "North/South Footage",
+          "length": 5,
+          "position": 3,
+          "type": "Numeric"
+        },
+        {
+          "description": "North/South Direction",
+          "length": 4,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "East/West Footage",
+          "length": 5,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "East/West Direction",
+          "length": 4,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Footage Reference",
+          "length": 12,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "X Coordinate",
+          "length": 12,
+          "position": 33,
+          "type": "Numeric"
+        },
+        {
+          "description": "Y Coordinate",
+          "length": 12,
+          "position": 45,
+          "type": "Numeric"
+        },
+        {
+          "description": "Zone Code",
+          "length": 4,
+          "position": 57,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Projection",
+          "length": 1,
+          "position": 61,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Feet or Meters (F/M)",
+          "length": 1,
+          "position": 62,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 17,
+          "position": 63,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "PF"
+    },
+    {
+      "description": "Proposed Bottom Hole Location (Congressional and Carter)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "PC"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 5,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Direction",
+          "length": 1,
+          "position": 9,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Number",
+          "length": 5,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Indicator",
+          "length": 3,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Number",
+          "length": 5,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spot",
+          "length": 8,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Code",
+          "length": 2,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Name",
+          "length": 17,
+          "position": 33,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 50,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 52,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 25,
+          "position": 55,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "PC"
+    },
+    {
+      "description": "Proposed Bottom Hole Location (Texas)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "PT"
+        },
+        {
+          "description": "Railroad District",
+          "length": 2,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Indicator",
+          "length": 1,
+          "position": 5,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Number",
+          "length": 4,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Fraction",
+          "length": 3,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Indicator",
+          "length": 1,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Number",
+          "length": 4,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section Fraction",
+          "length": 3,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot Number",
+          "length": 4,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 4,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Name",
+          "length": 16,
+          "position": 30,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Abstract Number",
+          "length": 7,
+          "position": 46,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 55,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 22,
+          "position": 58,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "PT"
+    },
+    {
+      "description": "Proposed Bottom Hole Location (Northeast and Ohio)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "PN"
+        },
+        {
+          "description": "Named Township",
+          "length": 22,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Indicator",
+          "length": 1,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Number",
+          "length": 5,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Quadrangle Name",
+          "length": 20,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Reference Latitude",
+          "length": 9,
+          "position": 51,
+          "type": "G2"
+        },
+        {
+          "description": "Reference Longitude",
+          "length": 10,
+          "position": 60,
+          "type": "G3"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 70,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 72,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 5,
+          "position": 75,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "PN"
+    },
+    {
+      "description": "Proposed Bottom Hole Location (Offshore)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "PO"
+        },
+        {
+          "description": "OCS Code/Number",
+          "length": 8,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Prefix",
+          "length": 1,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Number",
+          "length": 6,
+          "position": 12,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Suffix",
+          "length": 1,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Area Name",
+          "length": 8,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "UTM Quadrant",
+          "length": 7,
+          "position": 27,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State/Fed Waters Indicator",
+          "length": 1,
+          "position": 34,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Bottom Zone",
+          "length": 2,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 43,
+          "position": 37,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "PO"
+    },
+    {
+      "description": "Actual Bottom Hole Location (Footage)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "QF"
+        },
+        {
+          "description": "North/South Footage",
+          "length": 5,
+          "position": 3,
+          "type": "Numeric"
+        },
+        {
+          "description": "North/South Direction",
+          "length": 4,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "East/West Footage",
+          "length": 5,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "East/West Direction",
+          "length": 4,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Footage Reference",
+          "length": 12,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "X Coordinate",
+          "length": 12,
+          "position": 33,
+          "type": "Numeric"
+        },
+        {
+          "description": "Y Coordinate",
+          "length": 12,
+          "position": 45,
+          "type": "Numeric"
+        },
+        {
+          "description": "Zone Code",
+          "length": 4,
+          "position": 57,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Projection",
+          "length": 1,
+          "position": 61,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Feet or Meters (F/M)",
+          "length": 1,
+          "position": 62,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 17,
+          "position": 63,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "QF"
+    },
+    {
+      "description": "Actual Bottom Hole Location (Congressional and Carter)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "QC"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 5,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Direction",
+          "length": 1,
+          "position": 9,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Number",
+          "length": 5,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Indicator",
+          "length": 3,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Number",
+          "length": 5,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spot",
+          "length": 8,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Code",
+          "length": 2,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Name",
+          "length": 17,
+          "position": 33,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 50,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 52,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 25,
+          "position": 55,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "QC"
+    },
+    {
+      "description": "Actual Bottom Hole Location (Texas)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "QT"
+        },
+        {
+          "description": "Railroad District",
+          "length": 2,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Indicator",
+          "length": 1,
+          "position": 5,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Number",
+          "length": 4,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Fraction",
+          "length": 3,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Indicator",
+          "length": 1,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Number",
+          "length": 4,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section Fraction",
+          "length": 3,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot Number",
+          "length": 4,
+          "position": 21,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 4,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Name",
+          "length": 16,
+          "position": 30,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Abstract Number",
+          "length": 7,
+          "position": 46,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 55,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 22,
+          "position": 58,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "QT"
+    },
+    {
+      "description": "Actual Bottom Hole Location (Northeast and Ohio)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "QN"
+        },
+        {
+          "description": "Named Township",
+          "length": 22,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Indicator",
+          "length": 1,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Number",
+          "length": 5,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Quadrangle Name",
+          "length": 20,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Reference Latitude",
+          "length": 9,
+          "position": 51,
+          "type": "G2"
+        },
+        {
+          "description": "Reference Longitude",
+          "length": 10,
+          "position": 60,
+          "type": "G3"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 70,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 72,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 5,
+          "position": 75,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "QN"
+    },
+    {
+      "description": "Actual Bottom Hole Location (Offshore)",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "QO"
+        },
+        {
+          "description": "OCS Code/Number",
+          "length": 8,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Prefix",
+          "length": 1,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Number",
+          "length": 6,
+          "position": 12,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Suffix",
+          "length": 1,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Area Name",
+          "length": 8,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "UTM Quadrant",
+          "length": 7,
+          "position": 27,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State/Fed Waters Indicator",
+          "length": 1,
+          "position": 34,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Bottom Zone",
+          "length": 2,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 43,
+          "position": 37,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "QO"
+    },
+    {
+      "description": "Proposed Bottom Hole Reference Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "R1"
+        },
+        {
+          "description": "Measured Total Depth",
+          "length": 5,
+          "position": 3,
+          "type": "Numeric"
+        },
+        {
+          "description": "True Vertical Depth",
+          "length": 5,
+          "position": 8,
+          "type": "Numeric"
+        },
+        {
+          "description": "Closure",
+          "length": 14,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "N/S Offset Direction",
+          "length": 1,
+          "position": 27,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "N/S Offset",
+          "length": 5,
+          "position": 28,
+          "type": "Numeric"
+        },
+        {
+          "description": "E/W Offset Direction",
+          "length": 1,
+          "position": 33,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "E/W Offset",
+          "length": 5,
+          "position": 34,
+          "type": "Numeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 39,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 41,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 36,
+          "position": 44,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "R1"
+    },
+    {
+      "description": "Proposed Bottom Hole Reference Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "R2"
+        },
+        {
+          "description": "Narrative",
+          "length": 77,
+          "position": 3,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "R2"
+    },
+    {
+      "description": "Actual Bottom Hole Reference Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "S1"
+        },
+        {
+          "description": "Measured Total Depth",
+          "length": 5,
+          "position": 3,
+          "type": "Numeric"
+        },
+        {
+          "description": "True Vertical Depth",
+          "length": 5,
+          "position": 8,
+          "type": "Numeric"
+        },
+        {
+          "description": "Closure",
+          "length": 14,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "N/S Offset Direction",
+          "length": 1,
+          "position": 27,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "N/S Offset",
+          "length": 5,
+          "position": 28,
+          "type": "Numeric"
+        },
+        {
+          "description": "E/W Offset Direction",
+          "length": 1,
+          "position": 33,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "E/W Offset",
+          "length": 5,
+          "position": 34,
+          "type": "Numeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 39,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 41,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 36,
+          "position": 44,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "S1"
+    },
+    {
+      "description": "Actual Bottom Hole Reference Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "S2"
+        },
+        {
+          "description": "Narrative",
+          "length": 77,
+          "position": 3,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "S2"
+    },
+    {
+      "description": "Deviation Survey",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 1,
+          "position": 1,
+          "type": "T"
+        },
+        {
+          "description": "Measured Depth",
+          "length": 5,
+          "position": 2,
+          "type": "Numeric"
+        },
+        {
+          "description": "Drift Angle",
+          "length": 6,
+          "position": 7,
+          "type": "Numeric"
+        },
+        {
+          "description": "Survey Type",
+          "length": 4,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 53,
+          "position": 17,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "T"
+    },
+    {
+      "description": "Deviation Survey - Run Survey/Survey Level",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "U1"
+        },
+        {
+          "description": "Final Survey Company",
+          "length": 12,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Processing Type",
+          "length": 1,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Feet or Meters (F or M)",
+          "length": 1,
+          "position": 16,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Run Number",
+          "length": 2,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Company",
+          "length": 12,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Date",
+          "length": 8,
+          "position": 31,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Survey Type",
+          "length": 4,
+          "position": 39,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Start Depth",
+          "length": 5,
+          "position": 43,
+          "type": "Numeric"
+        },
+        {
+          "description": "End Depth",
+          "length": 5,
+          "position": 48,
+          "type": "Numeric"
+        },
+        {
+          "description": "Calculation Method",
+          "length": 2,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "North Reference",
+          "length": 1,
+          "position": 55,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Map Projection",
+          "length": 1,
+          "position": 56,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Zone Code",
+          "length": 4,
+          "position": 57,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "North Correction",
+          "length": 5,
+          "position": 61,
+          "type": "Numeric"
+        },
+        {
+          "description": "'E' or 'W'",
+          "length": 1,
+          "position": 66,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 13,
+          "position": 67,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "U1"
+    },
+    {
+      "description": "Deviation Survey - Point Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "U2"
+        },
+        {
+          "description": "Run Number",
+          "length": 3,
+          "position": 3,
+          "type": "Numeric"
+        },
+        {
+          "description": "Measured Depth",
+          "length": 5,
+          "position": 6,
+          "type": "Numeric"
+        },
+        {
+          "description": "True Vertical Depth",
+          "length": 8,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "Drift Angle",
+          "length": 6,
+          "position": 19,
+          "type": "Numeric"
+        },
+        {
+          "description": "Drift Direction-Azimuth (nnn.nn)",
+          "length": 6,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Rectangular Coordinates N/S Distance",
+          "length": 8,
+          "position": 31,
+          "type": "Numeric"
+        },
+        {
+          "description": "Rectangular Coordinates N/S Direction",
+          "length": 1,
+          "position": 39,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Rectangular Coordinates E/W Distance",
+          "length": 8,
+          "position": 40,
+          "type": "Numeric"
+        },
+        {
+          "description": "Rectangular Coordinates E/W Direction",
+          "length": 1,
+          "position": 48,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Projected Values (P)",
+          "length": 1,
+          "position": 49,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Depth Overlap Difference Run (O)",
+          "length": 1,
+          "position": 50,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 29,
+          "position": 51,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "U2"
+    },
+    {
+      "description": "Horizontal General Information",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "V1"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Contractor Name",
+          "length": 10,
+          "position": 7,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Maximum Angle Deviation (nnn.nn)",
+          "length": 6,
+          "position": 17,
+          "type": "Numeric"
+        },
+        {
+          "description": "Buildup Radius",
+          "length": 1,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Maximum Buildup (degrees) (nn.nn)",
+          "length": 5,
+          "position": 24,
+          "type": "Numeric"
+        },
+        {
+          "description": "Maximum Building (feet)",
+          "length": 5,
+          "position": 29,
+          "type": "Numeric"
+        },
+        {
+          "description": "Formation",
+          "length": 8,
+          "position": 34,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Reservoir",
+          "length": 11,
+          "position": 42,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Steered/Non-Steered",
+          "length": 1,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Total Horizontal Displacement",
+          "length": 5,
+          "position": 54,
+          "type": "Numeric"
+        },
+        {
+          "description": "Lateral Hole Length (Measured Depth)",
+          "length": 5,
+          "position": 59,
+          "type": "Numeric"
+        },
+        {
+          "description": "Horizontal Length in Formation",
+          "length": 5,
+          "position": 64,
+          "type": "Numeric"
+        },
+        {
+          "description": "Length of Pay",
+          "length": 5,
+          "position": 69,
+          "type": "Numeric"
+        },
+        {
+          "description": "Reason Horizontally Drilled",
+          "length": 4,
+          "position": 74,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 2,
+          "position": 78,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V1"
+    },
+    {
+      "description": "Horizontal Directional Survey Data",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "V2"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "North Reference",
+          "length": 1,
+          "position": 7,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Map Projection",
+          "length": 1,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Zone Code",
+          "length": 4,
+          "position": 9,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "North Correction",
+          "length": 5,
+          "position": 13,
+          "type": "Numeric"
+        },
+        {
+          "description": "North Correction Direction",
+          "length": 1,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Last Point (Measured Depth)",
+          "length": 5,
+          "position": 19,
+          "type": "Numeric"
+        },
+        {
+          "description": "Intermediate Depth",
+          "length": 5,
+          "position": 24,
+          "type": "Numeric"
+        },
+        {
+          "description": "Driller or Logger Depth Flag",
+          "length": 1,
+          "position": 29,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Narrative",
+          "length": 50,
+          "position": 30,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V2"
+    },
+    {
+      "description": "Horizontal Kickoff Point Footage Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V3F"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "North/South Footage",
+          "length": 5,
+          "position": 8,
+          "type": "Numeric"
+        },
+        {
+          "description": "North/South Direction",
+          "length": 4,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "East/West Footage",
+          "length": 5,
+          "position": 17,
+          "type": "Numeric"
+        },
+        {
+          "description": "East/West Direction",
+          "length": 4,
+          "position": 22,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Footage Reference",
+          "length": 12,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "X Coordinate",
+          "length": 12,
+          "position": 38,
+          "type": "Numeric"
+        },
+        {
+          "description": "Y Coordinate",
+          "length": 12,
+          "position": 50,
+          "type": "Numeric"
+        },
+        {
+          "description": "Zone Code",
+          "length": 4,
+          "position": 62,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Projection",
+          "length": 1,
+          "position": 66,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Feet or Meters (F/M)",
+          "length": 1,
+          "position": 67,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 12,
+          "position": 68,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V3F"
+    },
+    {
+      "description": "Horizontal Kickoff Point Congressional and Carter Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V3C"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 5,
+          "position": 9,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Direction",
+          "length": 1,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Number",
+          "length": 5,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Indicator",
+          "length": 3,
+          "position": 20,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Number",
+          "length": 5,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spot",
+          "length": 8,
+          "position": 28,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Code",
+          "length": 2,
+          "position": 36,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Name",
+          "length": 17,
+          "position": 38,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 55,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 57,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 20,
+          "position": 60,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V3C"
+    },
+    {
+      "description": "Horizontal Kickoff Point Texas Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V3T"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Railroad District",
+          "length": 2,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Indicator",
+          "length": 1,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Number",
+          "length": 4,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Fraction",
+          "length": 3,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Indicator",
+          "length": 1,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Number",
+          "length": 4,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section Fraction",
+          "length": 3,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot Number",
+          "length": 4,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 30,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 4,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Name",
+          "length": 16,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Abstract Number",
+          "length": 7,
+          "position": 51,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 58,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 60,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 17,
+          "position": 63,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V3T"
+    },
+    {
+      "description": "Horizontal Kickoff Point Northeast and Ohio Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V3N"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Named Township",
+          "length": 22,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Indicator",
+          "length": 1,
+          "position": 30,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Number",
+          "length": 5,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Quadrangle Name",
+          "length": 20,
+          "position": 36,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Reference Latitude",
+          "length": 9,
+          "position": 56,
+          "type": "G2"
+        },
+        {
+          "description": "Reference Longitude",
+          "length": 10,
+          "position": 65,
+          "type": "G3"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 75,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 77,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V3N"
+    },
+    {
+      "description": "Horizontal Kickoff Point Offshore Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V3O"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "OCS Number",
+          "length": 8,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Prefix",
+          "length": 1,
+          "position": 16,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Number",
+          "length": 6,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Suffix",
+          "length": 1,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Area Name",
+          "length": 8,
+          "position": 24,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "UTM Quadrant",
+          "length": 7,
+          "position": 32,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State/Federal Waters Indicator",
+          "length": 1,
+          "position": 39,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Bottom Zone",
+          "length": 2,
+          "position": 40,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 38,
+          "position": 42,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V3O"
+    },
+    {
+      "description": "Horizontal Point of Entry Footage Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V4F"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "North/South Footage",
+          "length": 5,
+          "position": 8,
+          "type": "Numeric"
+        },
+        {
+          "description": "North/South Direction",
+          "length": 4,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "East/West Footage",
+          "length": 5,
+          "position": 17,
+          "type": "Numeric"
+        },
+        {
+          "description": "East/West Direction",
+          "length": 4,
+          "position": 22,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Footage Reference",
+          "length": 12,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "X Coordinate",
+          "length": 12,
+          "position": 38,
+          "type": "Numeric"
+        },
+        {
+          "description": "Y Coordinate",
+          "length": 12,
+          "position": 50,
+          "type": "Numeric"
+        },
+        {
+          "description": "Zone Code",
+          "length": 4,
+          "position": 62,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Projection",
+          "length": 1,
+          "position": 66,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Feet or Meters (F/M)",
+          "length": 1,
+          "position": 67,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 12,
+          "position": 68,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V4F"
+    },
+    {
+      "description": "Horizontal Point of Entry Congressional and Carter Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V4C"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 5,
+          "position": 9,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Direction",
+          "length": 1,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Number",
+          "length": 5,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Indicator",
+          "length": 3,
+          "position": 20,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Number",
+          "length": 5,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spot",
+          "length": 8,
+          "position": 28,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Code",
+          "length": 2,
+          "position": 36,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Name",
+          "length": 17,
+          "position": 38,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 55,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 57,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 20,
+          "position": 60,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V4C"
+    },
+    {
+      "description": "Horizontal Point of Entry Texas Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V4T"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Railroad District",
+          "length": 2,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Indicator",
+          "length": 1,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Number",
+          "length": 4,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Fraction",
+          "length": 3,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Indicator",
+          "length": 1,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Number",
+          "length": 4,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section Fraction",
+          "length": 3,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot Number",
+          "length": 4,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 30,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 4,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Name",
+          "length": 16,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Abstract Number",
+          "length": 7,
+          "position": 51,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 58,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 60,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 17,
+          "position": 63,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V4T"
+    },
+    {
+      "description": "Horizontal Point of Entry Northeast and Ohio Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V4N"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Named Township",
+          "length": 22,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Indicator",
+          "length": 1,
+          "position": 30,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot or Section Number",
+          "length": 5,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Quadrangle Name",
+          "length": 20,
+          "position": 36,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Reference Latitude",
+          "length": 9,
+          "position": 56,
+          "type": "G2"
+        },
+        {
+          "description": "Reference Longitude",
+          "length": 10,
+          "position": 65,
+          "type": "G3"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 75,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 77,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V4N"
+    },
+    {
+      "description": "Horizontal Point of Entry Offshore Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "V4O"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "OCS Number",
+          "length": 8,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Prefix",
+          "length": 1,
+          "position": 16,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Number",
+          "length": 6,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Suffix",
+          "length": 1,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Area Name",
+          "length": 8,
+          "position": 24,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "UTM Quadrant",
+          "length": 7,
+          "position": 32,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State/Federal Waters Indicator",
+          "length": 1,
+          "position": 39,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Bottom Zone",
+          "length": 2,
+          "position": 40,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 38,
+          "position": 42,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V4O"
+    },
+    {
+      "description": "Horizontal Kickoff Point/Point of Entry Information Narrative",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "V5"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Narrative",
+          "length": 73,
+          "position": 7,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V5"
+    },
+    {
+      "description": "Horizontal Spoke Length/Terminus",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 2,
+          "position": 1,
+          "type": "V6"
+        },
+        {
+          "description": "Lateral Hole Identification",
+          "length": 4,
+          "position": 3,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spoke Length",
+          "length": 5,
+          "position": 7,
+          "type": "Numeric"
+        },
+        {
+          "description": "Measured Depth of Terminus",
+          "length": 5,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "True Vertical Depth of Terminus",
+          "length": 5,
+          "position": 17,
+          "type": "Numeric"
+        },
+        {
+          "description": "Distance N/S From Surface",
+          "length": 5,
+          "position": 22,
+          "type": "Numeric"
+        },
+        {
+          "description": "N/S Direction",
+          "length": 1,
+          "position": 27,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Distance E/W from Surface",
+          "length": 5,
+          "position": 28,
+          "type": "Numeric"
+        },
+        {
+          "description": "E/W Direction",
+          "length": 1,
+          "position": 33,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "X Coordinate",
+          "length": 12,
+          "position": 34,
+          "type": "Numeric"
+        },
+        {
+          "description": "Y Coordinate",
+          "length": 12,
+          "position": 46,
+          "type": "Numeric"
+        },
+        {
+          "description": "Meters or Feet (M/F)",
+          "length": 1,
+          "position": 58,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 21,
+          "position": 59,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "V6"
+    }
+  ]
+}

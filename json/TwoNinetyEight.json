@@ -1,0 +1,1236 @@
+{
+  "header": [
+    {
+      "description": "Record Key",
+      "length": 20,
+      "position": 1,
+      "type": "Alphanumeric"
+    },
+    {
+      "description": "Data Type",
+      "length": 20,
+      "position": 21,
+      "type": "US PRODUCTION DATA"
+    },
+    {
+      "description": "Download Format",
+      "length": 12,
+      "position": 41,
+      "type": "298"
+    },
+    {
+      "description": "Version",
+      "length": 4,
+      "position": 53,
+      "type": "Alphanumeric"
+    },
+    {
+      "description": "Delimiter",
+      "length": 7,
+      "position": 57,
+      "type": "Alphanumeric"
+    },
+    {
+      "description": "Write Date",
+      "length": 10,
+      "position": 64,
+      "type": "DateYYYYSlashMMSlashDD"
+    },
+    {
+      "description": "Entity Count",
+      "length": 6,
+      "position": 74,
+      "type": "Numeric"
+    }
+  ],
+  "records": [
+    {
+      "description": "Start Record Label",
+      "fields": [
+        {
+          "description": "START_US_PROD",
+          "length": 30,
+          "position": 1,
+          "type": "START_US_PROD"
+        },
+        {
+          "description": "Entity ID",
+          "length": 40,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 9,
+          "position": 71,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "START_US_PROD"
+    },
+    {
+      "description": "End Record Label",
+      "fields": [
+        {
+          "description": "END_US_PROD",
+          "length": 30,
+          "position": 1,
+          "type": "END_US_PROD"
+        },
+        {
+          "description": "Entity ID",
+          "length": 40,
+          "position": 31,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "END_US_PROD"
+    },
+    {
+      "description": "Unique ID",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "++"
+        },
+        {
+          "description": "Prod ID Number",
+          "length": 40,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "File Source",
+          "length": 7,
+          "position": 44,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 29,
+          "position": 51,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "++ "
+    },
+    {
+      "description": "Entity",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+A"
+        },
+        {
+          "description": "Region Code",
+          "length": 2,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Field Code",
+          "length": 6,
+          "position": 8,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County/Parish Code",
+          "length": 3,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County/Parish Name",
+          "length": 8,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Operator Code",
+          "length": 8,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Primary Product Code",
+          "length": 1,
+          "position": 33,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Mode",
+          "length": 1,
+          "position": 34,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Code",
+          "length": 8,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "AAPG Basin Code",
+          "length": 3,
+          "position": 43,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Coal Bed Methane Indicator",
+          "length": 1,
+          "position": 46,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Enhanced Recovery Flag",
+          "length": 1,
+          "position": 47,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 32,
+          "position": 48,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+A "
+    },
+    {
+      "description": "Congressional and Carter Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+AC"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 5,
+          "position": 5,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Direction",
+          "length": 1,
+          "position": 10,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Range Number",
+          "length": 5,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Indictor",
+          "length": 3,
+          "position": 16,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Equivalent Number",
+          "length": 5,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Spot",
+          "length": 8,
+          "position": 24,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Code",
+          "length": 2,
+          "position": 32,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Meridian Name",
+          "length": 17,
+          "position": 34,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 51,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 53,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 24,
+          "position": 56,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+AC"
+    },
+    {
+      "description": "Texas Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+AT"
+        },
+        {
+          "description": "Railroad District",
+          "length": 2,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Indicator",
+          "length": 1,
+          "position": 6,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block or League Number",
+          "length": 4,
+          "position": 7,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Block Fraction",
+          "length": 3,
+          "position": 11,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Indicator",
+          "length": 1,
+          "position": 12,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section or Labor Number",
+          "length": 4,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Section Fraction",
+          "length": 3,
+          "position": 17,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Lot Number",
+          "length": 4,
+          "position": 20,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Direction",
+          "length": 1,
+          "position": 24,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Township Number",
+          "length": 4,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Survey Name",
+          "length": 16,
+          "position": 29,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Abstract Number",
+          "length": 7,
+          "position": 45,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Code",
+          "length": 2,
+          "position": 52,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County Code",
+          "length": 3,
+          "position": 54,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 23,
+          "position": 57,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+AT"
+    },
+    {
+      "description": "Offshore Location",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+AO"
+        },
+        {
+          "description": "OCS Number",
+          "length": 8,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Bottom Hole Block Prefix",
+          "length": 1,
+          "position": 12,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Bottom HoleBlock Number",
+          "length": 6,
+          "position": 13,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Bottom Hole Block Suffix",
+          "length": 1,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Area Name",
+          "length": 8,
+          "position": 20,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "UTM Quadrant",
+          "length": 7,
+          "position": 28,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State/Federal Waters Indicator",
+          "length": 1,
+          "position": 35,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Water Bottom Zone",
+          "length": 2,
+          "position": 36,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 42,
+          "position": 38,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+AO"
+    },
+    {
+      "description": "Regulatory",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+AR"
+        },
+        {
+          "description": "Lease/Unit Code",
+          "length": 10,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Serial Number",
+          "length": 11,
+          "position": 14,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Co-mingled Facility Code",
+          "length": 4,
+          "position": 25,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Well Sub-Completion Code",
+          "length": 2,
+          "position": 29,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Reservoir Code",
+          "length": 6,
+          "position": 31,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "State Offshore Flag",
+          "length": 1,
+          "position": 37,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "API Unique",
+          "length": 5,
+          "position": 38,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "District Code",
+          "length": 2,
+          "position": 43,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 35,
+          "position": 45,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+AR"
+    },
+    {
+      "description": "Multiple County",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+A#"
+        },
+        {
+          "description": "County/Parish Code 1",
+          "length": 3,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County/Parish Name 1",
+          "length": 8,
+          "position": 7,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County/Parish Code 2",
+          "length": 3,
+          "position": 15,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County/Parish Name 2",
+          "length": 8,
+          "position": 18,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County/Parish Code 3",
+          "length": 3,
+          "position": 26,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "County/Parish Name 3",
+          "length": 8,
+          "position": 29,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Formation Name",
+          "length": 40,
+          "position": 37,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 3,
+          "position": 77,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+A#"
+    },
+    {
+      "description": "Name 1",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+B "
+        },
+        {
+          "description": "Lease Name",
+          "length": 36,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Operator Name",
+          "length": 36,
+          "position": 40,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 4,
+          "position": 76,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+B "
+    },
+    {
+      "description": "Name 2",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+C "
+        },
+        {
+          "description": "Field Name",
+          "length": 40,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Date Production Started",
+          "length": 6,
+          "position": 44,
+          "type": "MonthYYYYMM"
+        },
+        {
+          "description": "Date Production Ended",
+          "length": 6,
+          "position": 50,
+          "type": "MonthYYYYMM"
+        },
+        {
+          "description": "Liquid Gravity",
+          "length": 4,
+          "position": 56,
+          "type": "Numeric"
+        },
+        {
+          "description": "Reservoir Name",
+          "length": 20,
+          "position": 60,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+C "
+    },
+    {
+      "description": "Well",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+D "
+        },
+        {
+          "description": "API Number",
+          "length": 15,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "MMS Suffix",
+          "length": 3,
+          "position": 19,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Well Number",
+          "length": 9,
+          "position": 22,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Total Well Depth",
+          "length": 5,
+          "position": 31,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Pressure",
+          "length": 10,
+          "position": 36,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Temperature (BHP)",
+          "length": 10,
+          "position": 46,
+          "type": "Numeric"
+        },
+        {
+          "description": "Type Well",
+          "length": 2,
+          "position": 56,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Directional Drill Flag",
+          "length": 1,
+          "position": 58,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Well Status",
+          "length": 1,
+          "position": 59,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Michigan Permit Number",
+          "length": 5,
+          "position": 60,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Bottom Hole Calculation",
+          "length": 1,
+          "position": 65,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "True Vertical Depth",
+          "length": 5,
+          "position": 66,
+          "type": "Numeric"
+        },
+        {
+          "description": "Unit Well Serial Number",
+          "length": 8,
+          "position": 71,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 1,
+          "position": 79,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+D "
+    },
+    {
+      "description": "Lat/Long",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+D!"
+        },
+        {
+          "description": "Surface Latitude",
+          "length": 9,
+          "position": 4,
+          "type": "Numeric"
+        },
+        {
+          "description": "Surface Longitude",
+          "length": 10,
+          "position": 13,
+          "type": "Numeric"
+        },
+        {
+          "description": "Surface Lat/Long Source",
+          "length": 1,
+          "position": 23,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Surface Datum",
+          "length": 1,
+          "position": 24,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Bottom Hole Latitude",
+          "length": 9,
+          "position": 25,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Longitude",
+          "length": 10,
+          "position": 34,
+          "type": "Numeric"
+        },
+        {
+          "description": "Bottom Hole Lat/Long Source",
+          "length": 1,
+          "position": 44,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Bottom Hole Datum",
+          "length": 1,
+          "position": 45,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Plugged Date",
+          "length": 6,
+          "position": 46,
+          "type": "MonthYYYYMM"
+        },
+        {
+          "description": "Upper Perforation Depth",
+          "length": 5,
+          "position": 52,
+          "type": "Numeric"
+        },
+        {
+          "description": "Lower Perforation Depth",
+          "length": 5,
+          "position": 57,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 18,
+          "position": 62,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+D!"
+    },
+    {
+      "description": "Test Information 1",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+E "
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Upper Perforation Depth",
+          "length": 5,
+          "position": 7,
+          "type": "Numeric"
+        },
+        {
+          "description": "Lower Perforation Depth",
+          "length": 5,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "Liquid per Day",
+          "length": 7,
+          "position": 17,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas per Day",
+          "length": 6,
+          "position": 24,
+          "type": "Numeric"
+        },
+        {
+          "description": "Water per Day",
+          "length": 5,
+          "position": 30,
+          "type": "Numeric"
+        },
+        {
+          "description": "Choke Size",
+          "length": 5,
+          "position": 35,
+          "type": "Numeric"
+        },
+        {
+          "description": "% Basic Sediment & Water",
+          "length": 4,
+          "position": 40,
+          "type": "Numeric"
+        },
+        {
+          "description": "Flowing Tubing Pressure",
+          "length": 5,
+          "position": 44,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas/Oil Ratio",
+          "length": 7,
+          "position": 49,
+          "type": "Numeric"
+        },
+        {
+          "description": "Liquid Gravity",
+          "length": 4,
+          "position": 56,
+          "type": "Numeric"
+        },
+        {
+          "description": "Final Shut-in Pressure",
+          "length": 5,
+          "position": 60,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas Gravity",
+          "length": 5,
+          "position": 65,
+          "type": "Numeric"
+        },
+        {
+          "description": "Producing Method",
+          "length": 2,
+          "position": 70,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Test Date",
+          "length": 8,
+          "position": 72,
+          "type": "DateYYYYMMDD"
+        }
+      ],
+      "indicator": "+E "
+    },
+    {
+      "description": "Test Information 2",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+E!"
+        },
+        {
+          "description": "Test Number",
+          "length": 3,
+          "position": 4,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "BHP Divided by Z-Factor",
+          "length": 4,
+          "position": 7,
+          "type": "Numeric"
+        },
+        {
+          "description": "Z-Factor",
+          "length": 5,
+          "position": 11,
+          "type": "Numeric"
+        },
+        {
+          "description": "N-Factor",
+          "length": 6,
+          "position": 16,
+          "type": "Numeric"
+        },
+        {
+          "description": "Calculated Absolute Open Flow",
+          "length": 7,
+          "position": 22,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cum Gas at Test Date",
+          "length": 15,
+          "position": 29,
+          "type": "Numeric"
+        },
+        {
+          "description": "Casing Line Pressure",
+          "length": 5,
+          "position": 44,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 30,
+          "position": 49,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+E!"
+    },
+    {
+      "description": "Cumulative Production",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+F"
+        },
+        {
+          "description": "Year",
+          "length": 4,
+          "position": 4,
+          "type": "YearYYYY"
+        },
+        {
+          "description": "Cumulative Liquid",
+          "length": 20,
+          "position": 8,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cumulative Gas",
+          "length": 20,
+          "position": 28,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cumulative Water",
+          "length": 20,
+          "position": 48,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 12,
+          "position": 68,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+F "
+    },
+    {
+      "description": "Monthly Production",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+G"
+        },
+        {
+          "description": "Date",
+          "length": 8,
+          "position": 4,
+          "type": "MonthYYYYMM"
+        },
+        {
+          "description": "Liquid Production",
+          "length": 15,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas Production",
+          "length": 15,
+          "position": 27,
+          "type": "Numeric"
+        },
+        {
+          "description": "Water Production",
+          "length": 15,
+          "position": 42,
+          "type": "Numeric"
+        },
+        {
+          "description": "Allowable Production",
+          "length": 15,
+          "position": 57,
+          "type": "Numeric"
+        },
+        {
+          "description": "Number of Wells",
+          "length": 5,
+          "position": 72,
+          "type": "Numeric"
+        },
+        {
+          "description": "Days on Production",
+          "length": 2,
+          "position": 77,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 1,
+          "position": 79,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+G "
+    },
+    {
+      "description": "Cumulative Injection",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+I"
+        },
+        {
+          "description": "Year",
+          "length": 4,
+          "position": 4,
+          "type": "YearYYYY"
+        },
+        {
+          "description": "Cumulative Liquid Injection",
+          "length": 20,
+          "position": 8,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cumulative Gas Injection",
+          "length": 20,
+          "position": 28,
+          "type": "Numeric"
+        },
+        {
+          "description": "Cumulative Water Injection",
+          "length": 20,
+          "position": 48,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 12,
+          "position": 68,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+I "
+    },
+    {
+      "description": "Monthly Injection",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+J"
+        },
+        {
+          "description": "Date",
+          "length": 8,
+          "position": 4,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Liquid Injection",
+          "length": 15,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas Injection",
+          "length": 15,
+          "position": 27,
+          "type": "Numeric"
+        },
+        {
+          "description": "Water Injection",
+          "length": 15,
+          "position": 42,
+          "type": "Numeric"
+        },
+        {
+          "description": "Number of Injection Wells",
+          "length": 5,
+          "position": 57,
+          "type": "Numeric"
+        },
+        {
+          "description": "Days on Production",
+          "length": 2,
+          "position": 62,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 16,
+          "position": 64,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+J "
+    },
+    {
+      "description": "Total Disposition for Current Month",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+K"
+        },
+        {
+          "description": "Date",
+          "length": 8,
+          "position": 4,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Liquid Runs Monthly Total",
+          "length": 15,
+          "position": 12,
+          "type": "Numeric"
+        },
+        {
+          "description": "Gas Runs Monthly Total",
+          "length": 15,
+          "position": 27,
+          "type": "Numeric"
+        },
+        {
+          "description": "Blank",
+          "length": 38,
+          "position": 42,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+K "
+    }
+  ]
+}
