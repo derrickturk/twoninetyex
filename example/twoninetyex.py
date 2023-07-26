@@ -110,6 +110,8 @@ def convert_field(ty: str, val: str) -> Any:
             return val
         case 'Numeric':
             return float(val) if val != '' else None
+        case 'YearYYYY':
+            return int(val) if val != '' else None
         case 'MonthYYYYMM':
             return datetime.strptime(val, '%Y%m') if val != '' else None
         case 'DateYYYYSlashMMSlashDD':

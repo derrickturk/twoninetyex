@@ -19,7 +19,7 @@
 
 import sys
 
-from twoninetyseveneff import stream_records
+from twoninetyex import stream_records
 
 
 def main(argv: list[str]) -> int:
