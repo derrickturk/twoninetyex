@@ -532,6 +532,224 @@ let AHash: Record =
       ]
   }
 
+let B: Record =
+  { indicator = "+B "
+  , description = "Name 1"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+B "
+        , position = 1
+        , length = 3
+        }
+      , { description = "Lease Name"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 36
+        }
+      , { description = "Operator Name"
+        , type = FieldType.Alphanumeric
+        , position = 40
+        , length = 36
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 76
+        , length = 4
+        }
+      ]
+  }
+
+let C: Record =
+  { indicator = "+C "
+  , description = "Name 2"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+C "
+        , position = 1
+        , length = 3
+        }
+      , { description = "Field Name"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 40
+        }
+      , { description = "Date Production Started"
+        , type = FieldType.MonthYYYYMM
+        , position = 44
+        , length = 6
+        }
+      , { description = "Date Production Ended"
+        , type = FieldType.MonthYYYYMM
+        , position = 50
+        , length = 6
+        }
+      , { description = "Liquid Gravity"
+        , type = FieldType.Numeric
+        , position = 56
+        , length = 4
+        }
+      , { description = "Reservoir Name"
+        , type = FieldType.Alphanumeric
+        , position = 60
+        , length = 20
+        }
+      ]
+  }
+
+let D: Record =
+  { indicator = "+D "
+  , description = "Well"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+D "
+        , position = 1
+        , length = 3
+        }
+      , { description = "API Number"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 15
+        }
+      , { description = "MMS Suffix"
+        , type = FieldType.Alphanumeric
+        , position = 19
+        , length = 3
+        }
+      , { description = "Well Number"
+        , type = FieldType.Alphanumeric
+        , position = 22
+        , length = 9
+        }
+      , { description = "Total Well Depth"
+        , type = FieldType.Numeric
+        , position = 31
+        , length = 5
+        }
+      , { description = "Bottom Hole Pressure"
+        , type = FieldType.Numeric
+        , position = 36
+        , length = 10
+        }
+      , { description = "Bottom Hole Temperature (BHP)"
+        , type = FieldType.Numeric
+        , position = 46
+        , length = 10
+        }
+      , { description = "Type Well"
+        , type = FieldType.Alphanumeric
+        , position = 56
+        , length = 2
+        }
+      , { description = "Directional Drill Flag"
+        , type = FieldType.Alphanumeric
+        , position = 58
+        , length = 1
+        }
+      , { description = "Well Status"
+        , type = FieldType.Alphanumeric
+        , position = 59
+        , length = 1
+        }
+      , { description = "Michigan Permit Number"
+        , type = FieldType.Alphanumeric
+        , position = 60
+        , length = 5
+        }
+      , { description = "Bottom Hole Calculation"
+        , type = FieldType.Alphanumeric
+        , position = 65
+        , length = 1
+        }
+      , { description = "True Vertical Depth"
+        , type = FieldType.Numeric
+        , position = 66
+        , length = 5
+        }
+      , { description = "Unit Well Serial Number"
+        , type = FieldType.Alphanumeric
+        , position = 71
+        , length = 8
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 79
+        , length = 1
+        }
+      ]
+  }
+
+let DBang: Record =
+  { indicator = "+D!"
+  , description = "Lat/Long"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+D!"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Surface Latitude"
+        , type = FieldType.Numeric
+        , position = 4
+        , length = 9
+        }
+      , { description = "Surface Longitude"
+        , type = FieldType.Numeric
+        , position = 13
+        , length = 10
+        }
+      , { description = "Surface Lat/Long Source"
+        , type = FieldType.Alphanumeric
+        , position = 23
+        , length = 1
+        }
+      , { description = "Surface Datum"
+        , type = FieldType.Alphanumeric
+        , position = 24
+        , length = 1
+        }
+      , { description = "Bottom Hole Latitude"
+        , type = FieldType.Numeric
+        , position = 25
+        , length = 9
+        }
+      , { description = "Bottom Hole Longitude"
+        , type = FieldType.Numeric
+        , position = 34
+        , length = 10
+        }
+      , { description = "Bottom Hole Lat/Long Source"
+        , type = FieldType.Alphanumeric
+        , position = 44
+        , length = 1
+        }
+      , { description = "Bottom Hole Datum"
+        , type = FieldType.Alphanumeric
+        , position = 45
+        , length = 1
+        }
+      , { description = "Plugged Date"
+        , type = FieldType.MonthYYYYMM
+        , position = 46
+        , length = 6
+        }
+      , { description = "Upper Perforation Depth"
+        , type = FieldType.Numeric
+        , position = 52
+        , length = 5
+        }
+      , { description = "Lower Perforation Depth"
+        , type = FieldType.Numeric
+        , position = 57
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 62
+        , length = 18
+        }
+      ]
+  }
+
 let TwoNinetyEight: FileFormat =
   { header = FileHeader
   , records =
@@ -544,6 +762,10 @@ let TwoNinetyEight: FileFormat =
       , AO
       , AR
       , AHash
+      , B
+      , C
+      , D
+      , DBang
       ]
   }
 
