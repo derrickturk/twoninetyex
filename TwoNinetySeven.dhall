@@ -56,7 +56,7 @@ let FileHeader: List Field =
     , position = 64
     , length = 10
     }
-  , { description = "Count of Entities in Export File"
+  , { description = "Entity Count"
     , type = FieldType.Numeric
     , position = 74
     , length = 6
