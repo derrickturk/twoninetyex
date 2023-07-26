@@ -24,8 +24,8 @@ from twoninetyseveneff import stream_records
 
 def main(argv: list[str]) -> int:
     with open(argv[1]) as f:
-        for r in stream_records(f):
-            print(r.type)
+        for r in stream_records(f, indicators = {'A', 'BN', 'BF', 'QN', 'QF'}):
+            print(r)
     return 0
 
 

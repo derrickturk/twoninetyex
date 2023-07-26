@@ -80,7 +80,7 @@ class IndicatorTrie(NamedTuple):
             return self.suffixes[indicator[0]].longest_match(indicator[1:])
         if self.record:
             return self.record[0]
-        raise ValueError(f'No record spec found')
+        raise KeyError(indicator)
 
 
 def spec_to_indicator_trie(spec: list[RecordSpec]) -> IndicatorTrie:
@@ -157,13 +157,24 @@ def parse_header(fields: list[FieldSpec], line: str) -> dict[str, Any]:
     return hdr
 
 
-def parse_record(line: str, strict: bool = False) -> Record:
-    spec = SPEC297_TRIE.longest_match(line)
+def parse_record_spec(line: str) -> RecordSpec:
+    try:
+        return SPEC297_TRIE.longest_match(line)
+    except KeyError:
+        raise ValueError(f'Unknown record type for {line}')
+
+
+def parse_record(line: str, spec: RecordSpec, strict: bool = False) -> Record:
     return Record(spec['indicator'], spec['description'],
       parse_fields(spec['fields'], line, strict))
 
 
-def stream_records(src: TextIO, strict: bool = False) -> Iterator[Record]:
+def stream_records(src: TextIO, strict: bool = False,
+  indicators: set[str] | None = None) -> Iterator[Record]:
+    if indicators is not None:
+        indicators.add('START_US_WELL')
+        indicators.add('END_US_WELL')
+
     seen_start = False
     count = 0
     while line := src.readline():
@@ -171,7 +182,10 @@ def stream_records(src: TextIO, strict: bool = False) -> Iterator[Record]:
         print(hdr)
         count = int(hdr['Entity Count'])
         while line := src.readline():
-            rec = parse_record(line, strict)
+            rec_spec = parse_record_spec(line)
+            if indicators is not None and rec_spec['indicator'] not in indicators:
+                continue
+            rec = parse_record(line, rec_spec, strict)
             if rec.type == 'Start Record Label':
                 if seen_start:
                     raise ValueError('start without end')
