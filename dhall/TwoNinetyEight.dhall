@@ -935,8 +935,12 @@ let G: Record =
         , position = 1
         , length = 3
         }
+        {- spec has this as MonthYYYYMM but
+         - with length = 8, and real data having YYYYMMDD, I think this
+         - is the right call
+         -}
       , { description = "Date"
-        , type = FieldType.MonthYYYYMM
+        , type = FieldType.DateYYYYMMDD
         , position = 4
         , length = 8
         }
@@ -1154,6 +1158,7 @@ let TwoNinetyEight: FileFormat =
       , I
       , J
       , K
+      , L
       ]
   }
 

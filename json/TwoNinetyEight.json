@@ -1053,7 +1053,7 @@
           "description": "Date",
           "length": 8,
           "position": 4,
-          "type": "MonthYYYYMM"
+          "type": "DateYYYYMMDD"
         },
         {
           "description": "Liquid Production",
@@ -1231,6 +1231,48 @@
         }
       ],
       "indicator": "+K "
+    },
+    {
+      "description": "Monthly Disposition by Transporter",
+      "fields": [
+        {
+          "description": "Record Type Indicator",
+          "length": 3,
+          "position": 1,
+          "type": "+L"
+        },
+        {
+          "description": "Date",
+          "length": 8,
+          "position": 4,
+          "type": "DateYYYYMMDD"
+        },
+        {
+          "description": "Run Type",
+          "length": 20,
+          "position": 12,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Transporter/Purchaser Name",
+          "length": 12,
+          "position": 32,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Run Amount",
+          "length": 20,
+          "position": 44,
+          "type": "Alphanumeric"
+        },
+        {
+          "description": "Blank",
+          "length": 16,
+          "position": 64,
+          "type": "Alphanumeric"
+        }
+      ],
+      "indicator": "+L "
     }
   ]
 }
