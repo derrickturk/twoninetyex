@@ -96,13 +96,13 @@
           "type": "Alphanumeric"
         },
         {
-          "description": "Latitude (±nn.nnnnn)",
+          "description": "Latitude",
           "length": 9,
           "position": 16,
           "type": "Numeric"
         },
         {
-          "description": "Longitude (±nnn.nnnnn)",
+          "description": "Longitude",
           "length": 10,
           "position": 25,
           "type": "Numeric"

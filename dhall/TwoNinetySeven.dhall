@@ -111,12 +111,12 @@ let A: Record =
         , position = 2
         , length = 14
         }
-      , { description = "Latitude (±nn.nnnnn)"
+      , { description = "Latitude"
         , type = FieldType.Numeric
         , position = 16
         , length = 9
         }
-      , { description = "Longitude (±nnn.nnnnn)"
+      , { description = "Longitude"
         , type = FieldType.Numeric
         , position = 25
         , length = 10
