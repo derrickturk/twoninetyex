@@ -750,6 +750,234 @@ let DBang: Record =
       ]
   }
 
+let E: Record =
+  { indicator = "+E "
+  , description = "Test Information 1"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+E "
+        , position = 1
+        , length = 3
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 3
+        }
+      , { description = "Upper Perforation Depth"
+        , type = FieldType.Numeric
+        , position = 7
+        , length = 5
+        }
+      , { description = "Lower Perforation Depth"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 5
+        }
+      , { description = "Liquid per Day"
+        , type = FieldType.Numeric
+        , position = 17
+        , length = 7
+        }
+      , { description = "Gas per Day"
+        , type = FieldType.Numeric
+        , position = 24
+        , length = 6
+        }
+      , { description = "Water per Day"
+        , type = FieldType.Numeric
+        , position = 30
+        , length = 5
+        }
+      , { description = "Choke Size"
+        , type = FieldType.Numeric
+        , position = 35
+        , length = 5
+        }
+      , { description = "% Basic Sediment & Water"
+        , type = FieldType.Numeric
+        , position = 40
+        , length = 4
+        }
+      , { description = "Flowing Tubing Pressure"
+        , type = FieldType.Numeric
+        , position = 44
+        , length = 5
+        }
+      , { description = "Gas/Oil Ratio"
+        , type = FieldType.Numeric
+        , position = 49
+        , length = 7
+        }
+      , { description = "Liquid Gravity"
+        , type = FieldType.Numeric
+        , position = 56
+        , length = 4
+        }
+      , { description = "Final Shut-in Pressure"
+        , type = FieldType.Numeric
+        , position = 60
+        , length = 5
+        }
+      , { description = "Gas Gravity"
+        , type = FieldType.Numeric
+        , position = 65
+        , length = 5
+        }
+      , { description = "Producing Method"
+        , type = FieldType.Alphanumeric
+        , position = 70
+        , length = 2
+        }
+      , { description = "Test Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 72
+        , length = 8
+        }
+      ]
+  }
+
+let EBang: Record =
+  { indicator = "+E!"
+  , description = "Test Information 2"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+E!"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Test Number"
+        , type = FieldType.Alphanumeric
+        , position = 4
+        , length = 3
+        }
+      , { description = "BHP Divided by Z-Factor"
+        , type = FieldType.Numeric
+        , position = 7
+        , length = 4
+        }
+      , { description = "Z-Factor"
+        , type = FieldType.Numeric
+        , position = 11
+        , length = 5
+        }
+      , { description = "N-Factor"
+        , type = FieldType.Numeric
+        , position = 16
+        , length = 6
+        }
+      , { description = "Calculated Absolute Open Flow"
+        , type = FieldType.Numeric
+        , position = 22
+        , length = 7
+        }
+      , { description = "Cum Gas at Test Date"
+        , type = FieldType.Numeric
+        , position = 29
+        , length = 15
+        }
+      , { description = "Casing Line Pressure"
+        , type = FieldType.Numeric
+        , position = 44
+        , length = 5
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 49
+        , length = 30
+        }
+      ]
+  }
+
+let F: Record =
+  { indicator = "+F "
+  , description = "Cumulative Production"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+F"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Year"
+        , type = FieldType.YearYYYY
+        , position = 4
+        , length = 4
+        }
+      , { description = "Cumulative Liquid"
+        , type = FieldType.Numeric
+        , position = 8
+        , length = 20
+        }
+      , { description = "Cumulative Gas"
+        , type = FieldType.Numeric
+        , position = 28
+        , length = 20
+        }
+      , { description = "Cumulative Water"
+        , type = FieldType.Numeric
+        , position = 48
+        , length = 20
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 68
+        , length = 12
+        }
+      ]
+  }
+
+let G: Record =
+  { indicator = "+G "
+  , description = "Monthly Production"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+G"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Date"
+        , type = FieldType.MonthYYYYMM
+        , position = 4
+        , length = 8
+        }
+      , { description = "Liquid Production"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 15
+        }
+      , { description = "Gas Production"
+        , type = FieldType.Numeric
+        , position = 27
+        , length = 15
+        }
+      , { description = "Water Production"
+        , type = FieldType.Numeric
+        , position = 42
+        , length = 15
+        }
+      , { description = "Allowable Production"
+        , type = FieldType.Numeric
+        , position = 57
+        , length = 15
+        }
+      , { description = "Number of Wells"
+        , type = FieldType.Numeric
+        , position = 72
+        , length = 5
+        }
+      , { description = "Days on Production"
+        , type = FieldType.Numeric
+        , position = 77
+        , length = 2
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 79
+        , length = 1
+        }
+      ]
+  }
+
 let TwoNinetyEight: FileFormat =
   { header = FileHeader
   , records =
@@ -766,6 +994,10 @@ let TwoNinetyEight: FileFormat =
       , C
       , D
       , DBang
+      , E
+      , EBang
+      , F
+      , G
       ]
   }
 

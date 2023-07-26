@@ -25,6 +25,7 @@ SOFTWARE.
 | DateYYYYSlashMMSlashDD -- (YYYY/MM/DD)
 | DateYYYYMMDD -- (YYYYMMDD)
 | MonthYYYYMM -- (YYYYMM)
+| YearYYYY -- (YYYY)
 | G2 -- (±dd.mm.ss)
 | G3 -- (±ddd.mm.ss)
 | Literal: Text
