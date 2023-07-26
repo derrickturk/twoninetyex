@@ -591,7 +591,7 @@
           "description": "Record Type Indicator",
           "length": 3,
           "position": 1,
-          "type": "+B "
+          "type": "+B"
         },
         {
           "description": "Lease Name",
@@ -621,7 +621,7 @@
           "description": "Record Type Indicator",
           "length": 3,
           "position": 1,
-          "type": "+C "
+          "type": "+C"
         },
         {
           "description": "Field Name",
@@ -663,7 +663,7 @@
           "description": "Record Type Indicator",
           "length": 3,
           "position": 1,
-          "type": "+D "
+          "type": "+D"
         },
         {
           "description": "API Number",
@@ -843,7 +843,7 @@
           "description": "Record Type Indicator",
           "length": 3,
           "position": 1,
-          "type": "+E "
+          "type": "+E"
         },
         {
           "description": "Test Number",

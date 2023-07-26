@@ -537,7 +537,7 @@ let B: Record =
   , description = "Name 1"
   , fields =
       [ { description = "Record Type Indicator"
-        , type = FieldType.Literal "+B "
+        , type = FieldType.Literal "+B"
         , position = 1
         , length = 3
         }
@@ -564,7 +564,7 @@ let C: Record =
   , description = "Name 2"
   , fields =
       [ { description = "Record Type Indicator"
-        , type = FieldType.Literal "+C "
+        , type = FieldType.Literal "+C"
         , position = 1
         , length = 3
         }
@@ -601,7 +601,7 @@ let D: Record =
   , description = "Well"
   , fields =
       [ { description = "Record Type Indicator"
-        , type = FieldType.Literal "+D "
+        , type = FieldType.Literal "+D"
         , position = 1
         , length = 3
         }
@@ -755,7 +755,7 @@ let E: Record =
   , description = "Test Information 1"
   , fields =
       [ { description = "Record Type Indicator"
-        , type = FieldType.Literal "+E "
+        , type = FieldType.Literal "+E"
         , position = 1
         , length = 3
         }
