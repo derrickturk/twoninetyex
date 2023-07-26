@@ -284,6 +284,7 @@ def stream_records(src: TextIO, strict: bool = False,
                     seen_start = False
                     count -= 1
                     if count == 0:
+                        yield rec
                         break # try parsing as header
                 else:
                     raise ValueError('end without start')
