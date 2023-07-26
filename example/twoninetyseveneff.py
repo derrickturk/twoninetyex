@@ -21,11 +21,15 @@ import json
 import warnings
 from datetime import date, datetime
 
-from typing import Any, Iterator, NamedTuple, TextIO, TypeAlias, TypedDict
+from typing import (
+    Any, Callable, Iterator, NamedTuple, TextIO, TypeAlias, TypedDict
+)
 
 
 with open('json/TwoNinetySeven.json') as f:
     SPEC297 = json.load(f)
+with open('json/TwoNinetyEight.json') as f:
+    SPEC298 = json.load(f)
 
 
 class FieldSpec(TypedDict):
@@ -76,11 +80,17 @@ class IndicatorTrie(NamedTuple):
 
 
     def longest_match(self, indicator: str) -> RecordSpec:
+        # NASTY HACK for .9xc formats, where the indicator is sometimes quoted
+        while indicator and indicator[0] == '"':
+            indicator = indicator[1:]
         if indicator and indicator[0] in self.suffixes:
             return self.suffixes[indicator[0]].longest_match(indicator[1:])
         if self.record:
             return self.record[0]
         raise KeyError(indicator)
+
+
+FieldParser: TypeAlias = Callable[[list[FieldSpec], str, bool], dict[str, Any]]
 
 
 def spec_to_indicator_trie(spec: list[RecordSpec]) -> IndicatorTrie:
@@ -91,6 +101,7 @@ def spec_to_indicator_trie(spec: list[RecordSpec]) -> IndicatorTrie:
 
 
 SPEC297_TRIE = spec_to_indicator_trie(SPEC297['records'])
+SPEC298_TRIE = spec_to_indicator_trie(SPEC298['records'])
 
 
 def convert_field(ty: str, val: str) -> Any:
@@ -123,7 +134,42 @@ def convert_field(ty: str, val: str) -> Any:
             return val
 
 
-def parse_fields(fields: list[FieldSpec], line: str, strict: bool = False
+def comma_split(line: str) -> list[str]:
+    field: list[str] = []
+    fields = []
+    in_quote = False
+    quote_in_quote = False
+    for c in line:
+        if not in_quote:
+            if c == ',':
+                fields.append(''.join(field))
+                field = []
+            elif c == '"':
+                in_quote = True
+            else:
+                field.append(c)
+        elif not quote_in_quote:
+            if c == '"':
+                quote_in_quote = True
+            else:
+                field.append(c)
+        else:
+            if c == '"':
+                field.append(c) # escaped quote
+            else:
+                in_quote = False
+                if c == ',':
+                    fields.append(''.join(field))
+                    field = []
+                else: # weird case...
+                    field.append(c)
+            quote_in_quote = False
+    if line:
+        fields.append(''.join(field))
+    return fields
+
+
+def parse_fields_fixed(fields: list[FieldSpec], line: str, strict: bool = False
   ) -> dict[str, Any]:
     result = {}
     for f in fields:
@@ -142,50 +188,90 @@ def parse_fields(fields: list[FieldSpec], line: str, strict: bool = False
     return result
 
 
-def parse_header(fields: list[FieldSpec], line: str) -> dict[str, Any]:
-    if 'US WELL DATA' not in line:
+def parse_fields_comma(fields: list[FieldSpec], line: str, strict: bool = False
+  ) -> dict[str, Any]:
+    result = {}
+    vals = [w.rstrip() for w in comma_split(line)]
+    if len(vals) > len(fields):
+        raise ValueError('Invalid row length')
+    while len(vals) < len(fields):
+        # NASTY HACK for .9xc format: right-pad with blanks to match "Blank"
+        # fields in spec
+        vals.append('')
+    for f, val in zip(fields, vals):
+        ty = f['type']
+        if strict:
+            conv = convert_field(ty, val)
+        else:
+            try:
+                conv = convert_field(ty, val)
+            except ValueError:
+                warnings.warn(f'failed to convert "{val}" to type "{ty}"')
+                conv = val
+        result[f['description']] = conv
+    return result
+
+
+def parse_header(line: str) -> tuple[IndicatorTrie, FieldParser, dict[str, Any]]:
+    if 'US WELL DATA' in line:
+        hdr_fields = SPEC297['header']
+        trie = SPEC297_TRIE
+        fmt = '297'
+    elif 'US PRODUCTION DATA' in line:
+        hdr_fields = SPEC298['header']
+        trie = SPEC298_TRIE
+        fmt = '298'
+    else:
         raise ValueError(f'invalid header line: "{line}"')
-    if 'FIXED' not in line:
-        raise ValueError('expected FIXED format')
-    hdr = parse_fields(fields, line)
-    if hdr['Download Format'] != '297':
+
+    hdr = parse_fields_fixed(hdr_fields, line)
+
+    if hdr['Download Format'] != fmt:
         raise ValueError('unexpected download format')
     if hdr['Version'] != '1.1':
         raise ValueError('unexpected format version')
-    if hdr['Delimiter'] != 'FIXED':
-        raise ValueError('expected FIXED format')
-    return hdr
+
+    if hdr['Delimiter'] == 'FIXED':
+        field_parser = parse_fields_fixed
+    elif hdr['Delimiter'] == 'COMMA':
+        field_parser = parse_fields_comma
+    else:
+        raise ValueError('expected FIXED or COMMA format')
+
+    return trie, field_parser, hdr
 
 
-def parse_record_spec(line: str) -> RecordSpec:
+def parse_record_spec(line: str, trie: IndicatorTrie) -> RecordSpec:
     try:
-        return SPEC297_TRIE.longest_match(line)
+        return trie.longest_match(line)
     except KeyError:
         raise ValueError(f'Unknown record type for {line}')
 
 
-def parse_record(line: str, spec: RecordSpec, strict: bool = False) -> Record:
+def parse_record(line: str, spec: RecordSpec, field_parser: FieldParser,
+  strict: bool = False) -> Record:
     return Record(spec['indicator'], spec['description'],
-      parse_fields(spec['fields'], line, strict))
+      field_parser(spec['fields'], line, strict))
 
 
 def stream_records(src: TextIO, strict: bool = False,
   indicators: set[str] | None = None) -> Iterator[Record]:
     if indicators is not None:
-        indicators.add('START_US_WELL')
-        indicators.add('END_US_WELL')
+        indicators |= {
+            'START_US_WELL', 'END_US_WELL', 'START_US_PROD', 'END_US_PROD'
+        }
 
     seen_start = False
     count = 0
     while line := src.readline():
-        hdr = parse_header(SPEC297['header'], line)
+        trie, field_parser, hdr = parse_header(line)
         print(hdr)
         count = int(hdr['Entity Count'])
         while line := src.readline():
-            rec_spec = parse_record_spec(line)
+            rec_spec = parse_record_spec(line, trie)
             if indicators is not None and rec_spec['indicator'] not in indicators:
                 continue
-            rec = parse_record(line, rec_spec, strict)
+            rec = parse_record(line, rec_spec, field_parser, strict)
             if rec.type == 'Start Record Label':
                 if seen_start:
                     raise ValueError('start without end')

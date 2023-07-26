@@ -23,9 +23,14 @@ from twoninetyseveneff import stream_records
 
 
 def main(argv: list[str]) -> int:
+    if len(argv) != 2:
+        print(f'Usage {argv[0]} <298-or-297-file>', file=sys.stderr)
+        return 2
+
     with open(argv[1]) as f:
-        for r in stream_records(f, indicators = {'A', 'BN', 'BF', 'QN', 'QF'}):
+        for r in stream_records(f):
             print(r)
+
     return 0
 
 
