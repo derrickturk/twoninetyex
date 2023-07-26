@@ -21,18 +21,11 @@ import json
 import warnings
 from datetime import date, datetime
 
-from typing import Any, Iterator, NamedTuple, TextIO, TypedDict
+from typing import Any, Iterator, NamedTuple, TextIO, TypeAlias, TypedDict
 
 
 with open('json/TwoNinetySeven.json') as f:
     SPEC297 = json.load(f)
-
-RECORDS_BY_INDICATOR = { r['indicator']: r for r in SPEC297['records'] }
-
-# longest-to-shortest, then alphabetical
-INDICATOR_ORDER = sorted(
-  RECORDS_BY_INDICATOR.keys(),
-  key=lambda i: (-len(i), i))
 
 
 class FieldSpec(TypedDict):
@@ -40,6 +33,12 @@ class FieldSpec(TypedDict):
     type: str
     position: int
     length: int
+
+
+class RecordSpec(TypedDict):
+    indicator: str
+    description: str
+    fields: list[FieldSpec]
 
 
 class Record(NamedTuple):
@@ -58,6 +57,40 @@ class LongitudeDMS(NamedTuple):
     degrees: int
     minutes: int
     seconds: int
+
+
+class IndicatorTrie(NamedTuple):
+    character: str
+    record: list[RecordSpec] # used as mutable cell for 0 or 1 records
+    suffixes: dict[str, 'IndicatorTrie']
+
+    def insert(self, indicator: str, record: RecordSpec) -> None:
+        if indicator == '':
+            self.record.clear()
+            self.record.append(record)
+            return
+        next_char = indicator[0]
+        if next_char not in self.suffixes:
+            self.suffixes[next_char] = IndicatorTrie(next_char, [], {})
+        self.suffixes[next_char].insert(indicator[1:], record)
+
+
+    def longest_match(self, indicator: str) -> RecordSpec:
+        if indicator and indicator[0] in self.suffixes:
+            return self.suffixes[indicator[0]].longest_match(indicator[1:])
+        if self.record:
+            return self.record[0]
+        raise ValueError(f'No record spec found')
+
+
+def spec_to_indicator_trie(spec: list[RecordSpec]) -> IndicatorTrie:
+    t = IndicatorTrie('', [], {})
+    for r in spec:
+        t.insert(r['indicator'], r)
+    return t
+
+
+SPEC297_TRIE = spec_to_indicator_trie(SPEC297['records'])
 
 
 def convert_field(ty: str, val: str) -> Any:
@@ -125,12 +158,9 @@ def parse_header(fields: list[FieldSpec], line: str) -> dict[str, Any]:
 
 
 def parse_record(line: str, strict: bool = False) -> Record:
-    for i in INDICATOR_ORDER:
-        if line.startswith(i):
-            r = RECORDS_BY_INDICATOR[i]
-            return Record(i, r['description'],
-              parse_fields(r['fields'], line, strict))
-    raise ValueError(f'Unknown record: {line}')
+    spec = SPEC297_TRIE.longest_match(line)
+    return Record(spec['indicator'], spec['description'],
+      parse_fields(spec['fields'], line, strict))
 
 
 def stream_records(src: TextIO, strict: bool = False) -> Iterator[Record]:
