@@ -978,6 +978,159 @@ let G: Record =
       ]
   }
 
+let I: Record =
+  { indicator = "+I "
+  , description = "Cumulative Injection"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+I"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Year"
+        , type = FieldType.YearYYYY
+        , position = 4
+        , length = 4
+        }
+      , { description = "Cumulative Liquid Injection"
+        , type = FieldType.Numeric
+        , position = 8
+        , length = 20
+        }
+      , { description = "Cumulative Gas Injection"
+        , type = FieldType.Numeric
+        , position = 28
+        , length = 20
+        }
+      , { description = "Cumulative Water Injection"
+        , type = FieldType.Numeric
+        , position = 48
+        , length = 20
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 68
+        , length = 12
+        }
+      ]
+  }
+
+let J: Record =
+  { indicator = "+J "
+  , description = "Monthly Injection"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+J"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 4
+        , length = 8
+        }
+      , { description = "Liquid Injection"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 15
+        }
+      , { description = "Gas Injection"
+        , type = FieldType.Numeric
+        , position = 27
+        , length = 15
+        }
+      , { description = "Water Injection"
+        , type = FieldType.Numeric
+        , position = 42
+        , length = 15
+        }
+      , { description = "Number of Injection Wells"
+        , type = FieldType.Numeric
+        , position = 57
+        , length = 5
+        }
+      , { description = "Days on Production"
+        , type = FieldType.Numeric
+        , position = 62
+        , length = 2
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 64
+        , length = 16
+        }
+      ]
+  }
+
+let K: Record =
+  { indicator = "+K "
+  , description = "Total Disposition for Current Month"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+K"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 4
+        , length = 8
+        }
+      , { description = "Liquid Runs Monthly Total"
+        , type = FieldType.Numeric
+        , position = 12
+        , length = 15
+        }
+      , { description = "Gas Runs Monthly Total"
+        , type = FieldType.Numeric
+        , position = 27
+        , length = 15
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 42
+        , length = 38
+        }
+      ]
+  }
+
+let L: Record =
+  { indicator = "+L "
+  , description = "Monthly Disposition by Transporter"
+  , fields =
+      [ { description = "Record Type Indicator"
+        , type = FieldType.Literal "+L"
+        , position = 1
+        , length = 3
+        }
+      , { description = "Date"
+        , type = FieldType.DateYYYYMMDD
+        , position = 4
+        , length = 8
+        }
+      , { description = "Run Type"
+        , type = FieldType.Alphanumeric
+        , position = 12
+        , length = 20
+        }
+      , { description = "Transporter/Purchaser Name"
+        , type = FieldType.Alphanumeric
+        , position = 32
+        , length = 12
+        }
+      , { description = "Run Amount"
+        , type = FieldType.Alphanumeric
+        , position = 44
+        , length = 20
+        }
+      , { description = "Blank"
+        , type = FieldType.Alphanumeric
+        , position = 64
+        , length = 16
+        }
+      ]
+  }
+
 let TwoNinetyEight: FileFormat =
   { header = FileHeader
   , records =
@@ -998,6 +1151,9 @@ let TwoNinetyEight: FileFormat =
       , EBang
       , F
       , G
+      , I
+      , J
+      , K
       ]
   }
 
